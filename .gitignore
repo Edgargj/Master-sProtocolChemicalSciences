@@ -12,7 +12,6 @@
 *.cub
 *.cube
 *.tsv
-cachegrind.*
 *.gz
 *.aux
 *.bbl
@@ -26,7 +25,12 @@ cachegrind.*
 *.x
 *.a
 
-#binaries
+#Except .tex files
+!*.tex
+
+#Except .png and .jpg images
+!*.png
+!*.jpg
 
 #Trash and system files
 *~
@@ -38,7 +42,7 @@ bib/*
 pres/*
 taring/*
 mathematica/*
-Notas/*
+Notas/
 discuss/*
 proc/*
 outputs/*
