@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Protocolo Laboratorio de Fisicoquímica Teórica 
+% LaTeX Template
+% Version 0.1 (10/12/17)
+%
+% Part of this template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Edgar García Juarez (b613) edgargj.16@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------------------------------------------% 
+% Packages
+%-----------------------------------------------------------------------------%
+\documentclass[11pt]{article} 	
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[usenames]{color}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath,mathtools}
+\usepackage[font={small},format=plain,labelfont=bf]{caption} % Size and format of foot of figures and tables
+\usepackage{color}
+\usepackage{hyperref}
+%-----------------------------------------------------------------------------%
+% Margin settings 
+%-----------------------------------------------------------------------------%
+\usepackage{geometry}
+\geometry{
+	paper=letterpaper, % Paper type
+	inner=2.5cm, % Inner margin
+	outer=2.5cm, % Outer margin
+	top=3.5cm, % Top margin
+	bottom=3.5cm, % Bottom margin
+}
+%-----------------------------------------------------------------------------% 
+% New Commands
+%-----------------------------------------------------------------------------%
+\renewcommand{\tablename}{Tabla} % Name of table foot 
+\renewcommand{\baselinestretch}{1.5} % space between lines 1.5
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
+\newcommand\vtab[1][0.5cm]{\vspace*{#1}}
+%-----------------------------------------------------------------------------% 
+%-----------------------------------------------------------------------------%
+% Document
+%-----------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------% 
+
+\begin{document}
+%-----------------------------------------------------------------------------%
+% Cover Page
+%-----------------------------------------------------------------------------% 
+\pagestyle{empty} 
+\phantom{a}
+\vspace{-1.4cm}
+\begin{center}
+\includegraphics[width=4cm]{buap.pdf}
+
+\Large{\textbf{Benemérita Universidad Autónoma de Puebla}\\
+\rule{150mm}{0.1mm}\\
+Facultad de Ciencias Químicas\\
+Centro de Química - Instituto de Ciencias\\
+Posgrado en Ciencias Qímicas}\\
+\rule{150mm}{0.1mm}
+
+\vtab[.1cm]
+\Large{Protocolo de tesis de Maestría}\\
+\vtab[0.2cm]
+
+\large{\textbf{}}\\
+\vtab[0.2cm]
+
+Lic. en Química \\
+Édgar García Juárez \\
+\vtab[0.5cm]
+\begin{tabular}{cc}
+\vtab[10mm]
+Director de tesis & Co-directora de tesis \\
+Dr. Juan M Solano Altamirano & Dra. Viridiana Vargas Castro \\ 
+FCQ - BUAP & FCQ - BUAP \\ 
+\end{tabular} 
+\vtab[1cm] \\
+{\today}
+\end{center}
+
+\clearpage
+
+\section{Introducción}
+
+
+\section{Antecedentes}
+
+
+
+
+
+\section{Objetivos}
+\subsection{Objetivo general}
+
+
+
+\subsection{Objetivos particulares}
+
+\section{Metodología}
+\subsection{Dinámica Molecular}\label{sec:md}
+\subsection{Simulaciones de dinámica molecular}
+
+\clearpage
+
+\section{Cronograma}
+\begin{table}[hbp!]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.0pt}
+\begin{tabular}{||p{0.4\linewidth}|c|c|c|c|c|c|c|c|c|c|c|c||}
+\hline
+\textbf{Actividad} & \multicolumn{5}{c|}{2020} & \multicolumn{7}{c||}{2021}\\
+\hline
+& Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
+\hline
+Materias del primer semestre & X & X & X & X & X & & & & & & &  \\
+\hline
+ Aprendizaje \texttt{C++} & X & X & X & X & X & & & & & & &  \\\hline
+Materias del segundo semestre &  &  &  &  &  & X & X & X & X & X & X &\\
+\hline
+Revisi\'on bibliogr\'afica &  &  &  &  &  & X & X & X & X & X & X & X \\
+\hline
+Presentación del protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
+\hline
+Preparación de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
+\hline
+& \multicolumn{5}{c|}{2021} & \multicolumn{7}{c||}{2022}\\\hline
+& Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
+\hline
+& X & X &  &  &  &  &  &  &  &  &  &\\
+\hline
+Revisi\'on bibliogr\'afica & X & X & X & X & X & X & X & X &  &  &  &\\
+\hline
+ &  & X & X & X & X &  &  &  &  &  &  &\\
+\hline
+ &  & X & X & X & X & X & X &  &  &  &  &\\
+\hline
+An\'alisis num\'erico &  & X & X & X & X & X & X &  &  &  &  &\\
+\hline
+Redacci\'on de tesis &  &  &  &  &  & X & X & X & X &  &  &\\
+\hline
+Revisi\'on de tesis &  &  &  &  &  &  &  &  & X & X & X & \\
+\hline
+Examen &  &  &  &  &  &  &  &  &  &  &  & X\\
+\hline
+%Actividad &  &  &  &  &  &  &  &  &  &  &  &  \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\clearpage
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliografia}
+
+\end{document}
+
