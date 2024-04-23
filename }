@@ -1,0 +1,339 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Protocolo Laboratorio de Fisicoquímica Teórica 
+% LaTeX Template
+% Version 0.1 (10/12/17)
+%
+% Part of this template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Edgar García Juarez (b613) edgargj.16@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------------------------------------------% 
+% Packages
+%-----------------------------------------------------------------------------%
+\documentclass[11pt]{article} 	
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[usenames]{color}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath,mathtools}
+\usepackage[font={small},format=plain,labelfont=bf]{caption} % Size and format of foot of figures and tables
+\usepackage{color}
+\usepackage{hyperref}
+%-----------------------------------------------------------------------------%
+% Margin settings 
+%-----------------------------------------------------------------------------%
+\usepackage{geometry}
+\geometry{
+	paper=letterpaper, % Paper type
+	inner=2.5cm, % Inner margin
+	outer=2.5cm, % Outer margin
+	top=3.5cm, % Top margin
+	bottom=3.5cm, % Bottom margin
+}
+%-----------------------------------------------------------------------------% 
+% New Commands
+%-----------------------------------------------------------------------------%
+\renewcommand{\tablename}{Tabla} % Name of table foot 
+\renewcommand{\baselinestretch}{1.5} % space between lines 1.5
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
+\newcommand\vtab[1][0.5cm]{\vspace*{#1}}
+%-----------------------------------------------------------------------------% 
+%-----------------------------------------------------------------------------%
+% Document
+%-----------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------% 
+
+\begin{document}
+%-----------------------------------------------------------------------------%
+% Cover Page
+%-----------------------------------------------------------------------------% 
+\pagestyle{empty} 
+\phantom{a}
+\vspace{-1.4cm}
+\begin{center}
+\includegraphics[width=4cm]{buap.pdf}
+
+\Large{\textbf{Benemérita Universidad Autónoma de Puebla}\\
+\rule{150mm}{0.1mm}\\
+Facultad de Ciencias Químicas\\
+Centro de Química - Instituto de Ciencias\\
+Posgrado en Ciencias Qímicas}\\
+\rule{150mm}{0.1mm}
+
+\vtab[.1cm]
+\Large{Protocolo de tesis de Maestría}\\
+\vtab[0.2cm]
+
+\large{\textbf{}}\\
+\vtab[0.2cm]
+
+Lic. en Química \\
+Édgar García Juárez \\
+\vtab[0.5cm]
+\begin{tabular}{cc}
+\vtab[10mm]
+Director de tesis & Co-directora de tesis \\
+Dr. Juan M Solano Altamirano & Dra. Viridiana Vargas Castro \\ 
+FCQ - BUAP & FCQ - BUAP \\ 
+\end{tabular} 
+\vtab[1cm] \\
+{\today}
+\end{center}
+
+\clearpage
+
+\section{Introducción}
+
+
+
+Existen objetos que tienen la propiedad de que su geometría tenga una apariencia fragmentada o con una morfología aparentemente irregular y que no cambie a cualquiera que sea la escala a la que se analice, a estos objetos se les conoce como fractales. Los fractales están presentes en un gran número de sistemas complejos que van desde agregados microscópicos hasta cúmulos de galaxias, por lo tanto, existen objetos que se pueden describir en términos de geometría fractal. 
+
+La autosimilitud o invariancia de escala es la propiedad más importante en la geometría fractal porque puede modelar la complejidad de cualquier objeto. La dimensión fractal (D) es el índice numérico que cuantifica esta complejidad midiendo la tasa de adición de detalles estructurales con una mayor ampliación. En la literatura científica puede encontrase una gran variedad de métodos para determinar la dimesión fractal, lagunos de ellos son la dimesión fractal Hausdorff-Besicovitch y la dimesión fractal Minkowski. 
+
+La determinacion de la dimensión fractal de estructuras en crecimiento, normalmente resulta de la aplicación directa de las definiciones para D sin embargo esto es ineficaz.Por lo que es necesario medir o calcular cantidades que se puede demostrar que están relacionadas con la dimensión fractal de los objetos. Existen  tres tipos de enfoques principales para la determinación de estas cantidades: la experimental, el informático y el teórico. La determinación experimental representa una forma estándar de examinar los fenómenos en todos los campos de la física y también han jugado un papel importante en el desarrollo de la investigación sobre el crecimiento de los fractales. La situación es menos típica en el caso de los otros dos enfoques. Dado que la física del crecimiento fractal carece de una base teórica unificada, la mayoría de las investigaciones impulsadas por motivaciones teóricas se basan en simulación por computadora. El único principio teórico que parece ser aplicable a una gama relativamente amplia de procesos de crecimiento es la renormalización.
+
+
+Medición de la dimesion fractal en experimentos
+
+Existen varias técnicas experimentales para medir la dimensión fractal de estructuras invariantes. Los métodos más utilizados se pueden dividir en cuantro categorías:
+
+\begin{enumerate}
+\item Procesamiento de imágenes digitales de imágenes bidimensionales
+\item Experimentos de dispersión 
+\item Cubrir las estructuras con monocapas y 
+\item Medición directa de propiedades físicas dependientes de la dimensión.
+
+
+
+Existen dos aspectos de la geometría fractal: el sintético y el analítico. La síntesis se refiere a la generación de imágenes o formas siguiendo ciertas reglas matemáticas. Estas imágenes pueden ser idealizadas o de aspecto natural (es decir, forjados fractales).  El análisis, por otro lado, se refiere a la extracción de información cuantitativa de conjuntos de datos, a menudo imágenes. 
+
+
+
+6.1.1.1 La dimensión 
+
+Un objeto que continúa revelando más y más detalles a medida que se magnifica es morfológicamente complejo. Es precisamente esta propiedad de los objetos fractales (autosimilitud o invariancia de escala) la que sugiere que la geometría fractal podría ser un buen modelo para proporcionar medidas de complejidad. De hecho, la dimensión fractal mide la tasa de adición de detalles estructurales con una mayor ampliación. Por lo tanto, la dimensión fractal (D) sirve como cuantificador de la complejidad. Existen varias dimensiones fractales relacionadas (D). Hay una literatura considerable sobre los aspectos teóricos de la dimensión fractal. Es adecuado pensar en D como una medida estadística.
+
+ Métodos para determinar la dimensión fractal D
+
+Para mayor claridad visual, las ilustraciones son siluetas binarias de células nerviosas, células gliales y figuras idealizadas (Koch). Pero las mediciones y los cálculos se basaron en los bordes de estos y otros objetos similares, y los bordes eran conjuntos ininterrumpidos de píxeles negros sobre blancos. Por lo tanto, una imagen era una matriz de píxeles que eran blancos o negros. Los píxeles de borde (booleanos) estaban restringidos a un conjunto cerrado continuo de un píxel de ancho de píxeles cuadrados contiguos que rodeaba un conjunto compacto de píxeles booleanos cero. Había dos tipos de medidas aplicadas a este conjunto de píxeles. El primero fueron las distancias entre los puntos de la frontera. El segundo fue el recuento de píxeles de borde en cuadrículas de varios espaciados o en discos posicionados al azar de varios diámetros. Una transición entre estos se ejemplifica con los métodos de recuento de cajas y dilatación. Cuando se aplicó una medida de distancia, el lado de un píxel se convirtió en una unidad de longitud. Cuando se aplicaba una medida de conteo, el píxel del borde se convirtió en una unidad de masa.
+
+
+
+método de conteo de cajas
+
+Este método consiste en dividir el espacio que contiene un objeto dado en celdas o píxeles de una cierta longitud, después se cuenta el número de celdas o pixele que existen en el objeto de estudio. Este método se repite cambiando el valor de la longitud de la celda de forma logarítmica. 
+A esto se le conoce como método de conteo de cajas, siendo una forma práctica de comprobar la autosimilitud de un patrón determinado. 
+
+Radio de giro
+
+Matemáticamente, el radio de giro es la distancia cuadrada media de la raíz de las partes del objeto desde su centro de masa o desde un eje dado. En realidad, es la distancia perpendicular desde la masa del punto hasta el eje de rotación. Uno puede representar una trayectoria de un punto en movimiento como un cuerpo. Entonces, el radio de giro se puede utilizar para caracterizar la distancia típica recorrida por este punto.
+
+El radio de giro de un cuerpo alrededor del eje de rotación se define como la distancia radial a un punto que tendría un momento de inercia igual que la distribución real de la masa del cuerpo, si la masa total del cuerpo se concentrara allí.
+
+Método de masa
+
+Es una medida similar al método de conteo de cajas la diferencia principal es el uso de circulos en lugar de celdas. La relación matemática de esto es:
+
+$nu(d) = A*d^D$
+
+Donde nu(d) es el número de pixeles en una caja de tamaño d, d es el diametro longitud de la caja, A es un variable y D es la dimesión fractal. 
+Metodo de longitud 
+
+Hay varias formas de medir la D relacionada con la longitud. El método clásico de Richardson consiste en medir el perímetro de un objeto con varios tramos de Pinzas o varias longitudes de reglas (método de traza). Cuando el registro del perímetro se traza contra el registro de las longitudes de la regla, un objeto fractal da una línea recta. Con una pendiente negativa S. A partir de esta medición, D se calcula como D = 1 -S.
+
+Un segundo método se basa en el concepto de cubrir el borde y se llama método de conteo de cajas o cuadrícula. Aquí, se utilizan conjuntos de cajas cuadradas (es decir, cuadrículas) para cubrir el borde. Cada conjunto se caracteriza por un tamaño de caja. El número de cajas necesarias para cubrir el borde se indica en función del tamaño de la caja. El registro del número de cajas de cobertura de cada tamaño multiplicado por la longitud del borde de una caja se traza contra el registro de la longitud del borde de una caja. Una vez más, es el resultado de una línea recta, con la pendiente S, y D se calcula como antes.
+
+Un tercer método, desarrollado por Flook, se llama método de dilatación. La dilatación, en este caso, significa un ensanchamiento y suavizado de la frontera. Se logra por convolución con un disco binario, es decir, todos los componentes de todos los núcleos tienen un valor unitario (booleano). El resultado es un borde engrosado, pero en escala de grises. Para devolver este borde a los valores booleanos, todos los píxeles distintos de cero tienen un umbral de uno booleano. La velocidad a la que crece la masa total (o área de superficie) del borde en función del diámetro del núcleo de convolución depende de D. El registro del área resultante dividido por el diámetro del núcleo se traza contra el registro del diámetro del núcleo. Una vez más, una línea recta resulta con una pendiente negativa S, y D se calcula como se indica anteriormente. Este método, si bien es una medida relacionada con la longitud, proporciona un puente entre los métodos basados en la longitud y la masa en el sentido de que cada píxel en el borde está involucrado en la medición y el área es simplemente un recuento de los píxeles o puntos de masa.
+
+Cabe señalar que, con estos métodos relacionados con la longitud, la magnitud de la medida resultante (perímetros o recuentos/diámetro) aumenta a medida que el elemento de medición disminuye en tamaño. En un fractal determinista o verdadero, como las figuras de Koch, esto continúa sin límite. Este es un ejemplo de las propiedades mas importantes y definitoria de los fractales: la autosimilitud o la simetría de escala. Es decir, los objetos fractales se ven cualitativamente iguales en todas las escalas o aumentos. Tal autosimilaridad determinista existe solo como fórmulas matemáticas o en los ordenadores. Los fractales del mundo real o naturales solo son autosimilares en un sentido estadístico y tienen líneas rectas en los gráficos de registros. También debe tenerse en cuenta que las operaciones de medición anteriores tienen la característica de un filtro de paso bajo, con un mayor filtrado con aumentos en el tamaño de los elementos de medición. Es decir, eliminan progresivamente las altas frecuencias espaciales de una imagen, al tiempo que dejan las frecuencias espaciales más bajas.
+
+
+
+
+Las características de la morfología celular que más influyen en la magnitud de D son la profusidad de la ramificación y la rugosidad o rugosidad del borde, con aumentos en cualquiera de los dos que conducen a una D más grande". Esto significa, por supuesto, que dos celdas que se ven muy diferentes (una con un borde liso y muchas ramas; la otra con pocas ramas y un borde resistente) pueden tener la misma D. Este resultado enfatiza que, con tales medidas globales, D no proporciona una especificación morfológica única.
+
+El método exacto que se utiliza para determinar la D no depende de si una imagen es similar a sí misma. Eso está determinado por los gráficos de registro. El rango de la pendiente lineal de esos gráficos identifica el rango de autosimilitud. En el trabajo considerado anteriormente, solo el borde es fractal. El interior sin estructura es euclidiano, no fractal. Uno puede demostrar esto haciendo un análisis de un relleno frente a un borde de una figura de Koch con D conocida. Solo la imagen del borde da el resultado correcto (excepto por el método de seguimiento).
+
+6.2 Usos de la geometría fractal y D
+
+Ahora que hemos definido D y explicado los métodos para obtenerlo, surge naturalmente la pregunta de si el conocimiento de la magnitud de la dimensión tiene alguna utilidad. Las respuestas provienen de varios experimentos en los que se ha empleado para cuantificar algunos aspectos de la morfología celular. 
+
+6.2.1 Cuantificación y clasificación
+
+Algunos de los primeros usos de la geometría fractal en el estudio de la morfología celular de las células individuales fueron simplemente para cuantificar su complejidad y ver si los números coincidían con estimaciones intuitivas. Los resultados generales se consideraron positivos. Como se puede ver en la Figura 5, donde las D de varias células gliales están indicadas por la línea del vértículo desde la silueta hasta el eje D, a medida que las células se vuelven más complejas, su valor D aumenta.
+
+
+Caserta et. al." compararon las D de las células ganglionares de la retina maduras frente a las inmaduras y sugirió la agregación limitada por difusión (DLA) como un posible mecanismo para el crecimiento neuronal; la DLA se asocia tradicionalmente con el crecimiento fractal (ver más abajo).
+Otros estudios de células ganglionares de la retina sugirieron otros mecanismos (crecimiento de los sistemas L) para el crecimiento neuronal. +16 Ambas hipótesis tienen características atractivas, pero Aún no se ha verificado por experimentos. En dos artículos,17,18 la propiedad de la autosimilitud de ciertos tipos de células se demostró mediante cambios de aumento óptico de hasta diez veces.
+
+Figura 6 Los datos de las neuronas de la médula espinal cultivadas en células en diferentes etapas y momentos de desarrollo (A) Las células se clasifican sobre la base del número de dendritas primarias que emanan de la célula simA 2 3 o er y en las características dendríticas SA y 5B. (Las células C aumentan en tamaño y complejidad con el tiempo en el cultivo. (B) Trazar los cambios en la complejidad en función del tiempo en el cultivo para los cuatro tipos de células. Las curvas se derivan de la ecuación que se muestra por encima del eje del tiempo en (B). Ver texto.
+
+
+
+6.2.2 Crecimiento y diferenciación
+
+%Un uso significativo de los conceptos y medidas de la geometría fractal ha sido en el área del estudio del crecimiento morfológico y la diferenciación de las celulas nerviosas y gliales individuales en el cultivo celular. Varios estudios de 1920 han medido las D de las células individuales en el momento en que sus progenitores se plantaron en platos de cultivo hasta que maduraron a algún valor de meseta de complejidad. En primer lugar, las células se identificaron sobre la base del número de dendritas primarias que emanan de sus somas, a saber, dos dendritas primarias, tres o cuatro dendritas y cinco o más denritas. Las células con cinco o más dendritas se subdividieron aún más sobre la base de sus patrones de ramificación dendrítica (por ejemplo, densidad, longitud, ramas totales; Figura 6А).$
+
+Todos los tipos de células son esferas virtuales cuando se aplanan en platos de cultivo y, por lo tanto, cuando se observan en un plano tienen una D cerca de 1. A medida que estas células crecen y se extienden ramas o dendritas, su D aumenta monótonamente a algún valor final o de meseta entre 1 y 2 (ver Figuras 6B y C y Tabla 1). En todos los tipos de células, este crecimiento monótono a menudo puede encajar bien con un modelo matemático simple que emplea el concepto de una constante de tiempo.
+
+4.1 Introducción: conceptos básicos y terminología
+
+En esta sección se presentará una breve introducción a los conceptos básicos de la teoría fractal que se aplica a las proteínas y enzimas. 
+
+
+Todos los mencionados anteriormente han estado fuera del alcance de las geometrías euclidianas y diferenciales, dado que la estructura de la proteína tiene una forma tan compleja que solo se puede analizar adecuadamente mediante el nuevo enfoque de la geometría fractal
+
+Un fractal implica un patrón complejo con autosimilitud y autoafinidad. En otras palabras, un fractal es una forma hecha de partes similares al conjunto de alguna manera. El parámetro que caracteriza una característica fractal se llama dimensión fractal (D). Muchos trabajos pioneros han demostrado una y otra vez que la proteína que tiene autosimilitud estadística puede ser manejada por el enfoque fractal. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de proteínas es cierta en lo común solo en un sentido estadístico, es decir, la parte no siempre se verá exactamente como el todo. Otra diferencia entre las macromoléculas biológicas y los objetos ideales es que una fractal no es autosimilar en todas las escalas de longitud. Hay límites de tamaño superior e inferior más allá de los cuales una macromolécula ya no es fractal.
+
+La principal contribución de la teoría fractal al pensamiento científico moderno no es tanto a través del desarrollo de herramientas matemáticas útiles, sino en ayudar a muchos científicos a superar las barreras psicológicas del tratamiento de problemas que implican geometrías complejas. La investigación fractal sobre enzimas y proteínas es actualmente un campo activo de la enzimología y la ciencia macromolecular biológica.
+
+En el análisis fractal de proteínas, a menudo se busca una ley de poder de la forma p - v°, donde p es una propiedad; v, la variable, y a, el exponente, pueden estar relacionados con el fractal.
+
+
+
+Una proteína consiste en una cadena de polipéptidos compuesta por residuos de aminoácidos unidos entre sí por enlaces peptídicos. La cadena polipeptídica o columna vertebral forma un polímero lineal compuesto por unidades repetitivas que son idénticas, excepto por los terminales de la cadena.
+
+Por lo tanto, las proteínas tienen aspectos fractales. Hay pocos enlaces cruzados covalentes (disulfuro), pero la cadena nunca está ramificada. Los tipos de proteínas son decididos por los aminoácidos de la cadena polipeptídica. Hay 20 aminoácidos comunes que difieren en sus cadenas laterales, formando una serie de tipos de proteínas, desde la glicina más simple hasta el triptófano más complejo. Por lo tanto, el análisis fractal de la conformación de la cadena de proteínas puede ser importante para el estudio de las características de las proteínas.
+
+La estructura primaria de un proteina se conoce como la secuencia de ácidos amínicos y determina la conformación nativa. Los elementos de la estructura secundaria son las láminas a-helices y B-plisadas, mientras que la estructura terciaria se relaciona con las disposiciones espaciales generales de los residuos de aminoácidos en las proteínas. En general, las proteínas son sistemas apretados, ¿y hay un número relativamente pequeño de vacíos? Por lo tanto, la dimensión fractal se puede utilizar para caracterizar las estructuras terciarias de proteínas y enzimas.
+
+Para las proteínas, otras propiedades como la densidad de las frecuencias vibratorias, el comportamiento caótico, la geometría de la superficie y la cinética, etc., parecen obedecer a las leyes de escala en algunos casos limitantes. También se pueden describir mediante diferentes modelos fractales y diferentes tipos de dimensiones fractales. Por lo tanto, es necesario introducir algunos temas especiales de la teoría fractal, como el fractal de grasa, el multifractal, la dimensión fractal, etc.
+
+
+Fractal de grasa
+
+Un fractal de grasa' es un conjunto con un límite fractal, una medida de Lebesque finita y una medida distinta de cero en la misma dimensión (entera) que el espacio subyacente (d)' Para la definición del término fractal de grasa, primero debemos tener en cuenta que el punto principal es que los conjuntos con estructura fractal pero la medida finita (Lebesque) tienen dimensiones (enteras) que son insensibles a esta estructura fractal. Como resultado, la estructura fractal de dicho conjunto no está bien caracterizada por la dimensión del conjunto, sino por un exponente fractal de grasa (B). En una dimensión, cada conjunto es el complemento de una colección inconexa de agujeros (intervalos y puntos) de tamaños bien definidos. Si uno llena todos los agujeros de un tamaño inferior a e, se obtiene un conjunto de medidas de grano grueso.
+
+4. Multifractal
+
+Las medidas multifactales o fractales están relacionadas con el estudio de una distribución de cantidades físicas o de otro tipo en un soporte geométrico. El soporte puede ser un plano ordinario, la superficie de un volumen, o podría ser en sí mismo un fractal. En general, un multifractal posee un número infinito de singularidades de infinitos tipos. 
+
+La "multifractalidad" expresa el hecho de que los puntos correspondientes a un tipo determinado de singularidad suelen formar un subconjunto fractal cuya dimensión depende del tipo de singularidad. La idea de que un multifractal puede ser representado en términos de subconjuntos fractales entrelaizados que tienen diferentes exponentes de escala abre un nuevo reino para la aplicación de la geometría fractal a los sistemas físicos. El estudio de los multifractales es un campo en rápido desarrollo.
+
+Con el fin de describir un multifractal de una manera más cuantitativa, imaginamos que una red hipercúbica de dimensión d con una constante de red L se pone en el fractal y se denota por p, la probabilidad estacionaria asociada con la j-caja del volumen 1,
+
+Donde yo,p, = 1. Primero nos interesa el comportamiento de p, en función de la caja
+
+Tamaño medido en unidades del tamaño lineal L de la estructura. Como antes, esta unidad adimensional se denotará por e = 1/L, y la escala de varias cantidades en el
+
+%Se estudiará el límite & → 0, trivialmente para una estructura homogénea con una distribución uniforme (densidad) p,(E) ~ e. En el caso de un fractal uniforme de D con una distribución uniforme en él, p(e) ~ e, ya que una distribución con una densidad uniforme p, corresponde al volumen de soporte en la caja ith. En la situación más compleja, cuando se considera un fractal no uniforme con una distribución que tiene infinitas singularidades, se nos lleva a asumir una forma general.
+
+
+%Donde & « 1 y a pueden asumir un rango de valores dependiendo del valor dado de la medida. El exponente no entero a corresponde a la fuerza de la singularidad local de la medida y a veces también se llama índice de aglomeración o exponente de Hölder. Aunque a depende de la posición real en el fractal, generalmente hay muchas cajas con el mismo índice a. En general, el número de tales cajas se escala con E como
+
+
+
+Donde f(a) es la dimensión fractal del subconjunto de cajas caracterizada por el exponente a. El exponente a puede tomar valores del intervalo (o, a] y fla) suele ser una sola función jorobada con un máximo
+
+
+
+
+
+El espectro f(a) de un fractal uniforme ordinario es un solo punto en el plano f-a.
+
+Por lo tanto, se supone que un multifractal típico está hecho de conjuntos entrelazados de singularidades de fuerza a, cada uno caracterizado por su propia dimensión fractal fla). Este hecho es la razón del nombre multifractal, que se usa con frecuencia para tales medidas fractales.
+
+
+
+Con el fin de determinar f(x) para una distribución dada, es útil introducir algunas cantidades que están más directamente relacionadas con las propiedades observables de la medida. Entonces, las relaciones entre estas cantidades y f(a) permiten obtener una descripción completa de una medida fractal.
+
+Una cualidad importante que se puede determinar a partir de los pesos p, es la suma de todas las cajas de la potencia de las probabilidades de la caja
+
+%Para - < q <∞. Esta definición de Z está estrechamente relacionada con las entropías de Renyi. Para
+
+Q = 0 La ecuación (6) da N(e), el número de cajas de tamaño e necesarias para cubrir el
+
+Soporte fractal (la región donde p, + 0). Por lo tanto,
+
+Donde D es la dimensión del soporte. Dado que la distribución está normalizada,
+
+(E) = 1.
+
+Debido a la complejidad de las distribuciones multifractales, la escala de Z(e) para E → O generalmente depende de q de una manera no trivial:
+
+La distribución de p, - e es extremadamente deshomogénea con respecto a los valores y el número de cajas con la misma P. Como resultado, cuando e → 0, la contribución dominante a la ecuación (6) proviene de un subconjunto de todas las cajas posibles. Este subconjunto forma un fractal con una dimensión fractal f(q) dependiendo del valor real de q. Por lo tanto,
+
+
+Donde Ng(e) es el número de cajas que dan la contribución esencial en la ecuación (6).
+
+Además, todas estas cajas tienen el mismo p, = p(q). Denotaremos la singularidad
+
+Fuerza para cajas con probabilidad p(q) por o(q), es decir
+
+Para e → 0. Los espectros flq) definidos por las ecuaciones (10) y (11) proporcionan una descripción alternativa de un multifractal con respecto a las ecuaciones (3) y (4) dadas por
+
+\section{Antecedentes}
+
+
+
+
+
+\section{Objetivos}
+\subsection{Objetivo general}
+
+
+
+\subsection{Objetivos particulares}
+
+\section{Metodología}
+\subsection{Dinámica Molecular}\label{sec:md}
+\subsection{Simulaciones de dinámica molecular}
+
+\clearpage
+
+\section{Cronograma}
+\begin{table}[hbp!]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.0pt}
+\begin{tabular}{||p{0.4\linewidth}|c|c|c|c|c|c|c|c|c|c|c|c||}
+\hline
+\textbf{Actividad} & \multicolumn{5}{c|}{2020} & \multicolumn{7}{c||}{2021}\\
+\hline
+& Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
+\hline
+Materias del primer semestre & X & X & X & X & X & & & & & & &  \\
+\hline
+ Aprendizaje \texttt{C++} & X & X & X & X & X & & & & & & &  \\\hline
+Materias del segundo semestre &  &  &  &  &  & X & X & X & X & X & X &\\
+\hline
+Revisi\'on bibliogr\'afica &  &  &  &  &  & X & X & X & X & X & X & X \\
+\hline
+Presentación del protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
+\hline
+Preparación de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
+\hline
+& \multicolumn{5}{c|}{2021} & \multicolumn{7}{c||}{2022}\\\hline
+& Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
+\hline
+& X & X &  &  &  &  &  &  &  &  &  &\\
+\hline
+Revisi\'on bibliogr\'afica & X & X & X & X & X & X & X & X &  &  &  &\\
+\hline
+ &  & X & X & X & X &  &  &  &  &  &  &\\
+\hline
+ &  & X & X & X & X & X & X &  &  &  &  &\\
+\hline
+An\'alisis num\'erico &  & X & X & X & X & X & X &  &  &  &  &\\
+\hline
+Redacci\'on de tesis &  &  &  &  &  & X & X & X & X &  &  &\\
+\hline
+Revisi\'on de tesis &  &  &  &  &  &  &  &  & X & X & X & \\
+\hline
+Examen &  &  &  &  &  &  &  &  &  &  &  & X\\
+\hline
+%Actividad &  &  &  &  &  &  &  &  &  &  &  &  \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\clearpage
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliografia}
+
+\end{document}
+

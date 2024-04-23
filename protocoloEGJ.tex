@@ -17,6 +17,7 @@
 \usepackage[usenames]{color}
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{verbatim}
 \usepackage{amsmath,mathtools}
 \usepackage[font={small},format=plain,labelfont=bf]{caption} % Size and format of foot of figures and tables
 \usepackage{color}
@@ -86,18 +87,11 @@ FCQ - BUAP & FCQ - BUAP \\
 
 \section{Introducción}
 
-\begin{comment}
-La determinación de estructuras que tienen la propiedad de que su aspecto y distribución sea estadística y que no cambie a cualquiera que sea la escala a la que se analice, se presente en un gran número de sistemas complejos, como lo son las proteínas, la dimesión fractal es el índice númerico que sintetiza toda la información que contiene un sistema dinámico a analizar y puede ser utilizada para describir los rasgos de estructuras  complejas "proteícas" porque no rigen por topologías enteras y formas regulares. 
-
-Se pretende analizar la dimesion fractal de masa y el radio de giro de varias proteínas partiendo de la definicion de multifractalidad a partir de datos experimentales.
-
-Esperando obtener resultados que ayuden a entender si alguna region de una proteína con una mayor o menor dimensión fractal está asociada con sitios de interacción con otras proteínas o con mutaciones relacionadas, para identificar regiones específicas de una proteína que exhiba una complejidad estructural alterada en pacientes con  alguna enfermedad, para desarrollar modelos predictivos que evaluen cómo las mutaciones  afectan la estructura tridimensional y la función de alguna proteína o para saber si existen implicaciones importantes para la predicción del riesgo de desarrollar alguna enfermedad.
-
-Escribir que se pretender encontrar una relacion entre la dimesion fractal de masa el radio de giro y la multifractalidad (explicarlo a partir del articulo del Dr. Carrillo).
+La determinación de estructuras que tienen la propiedad de que su aspecto y distribución sea estadística y que no cambie a cualquiera que sea la escala a la que se analice, se presente en un gran número de sistemas complejos, como lo son las proteínas, la dimesión fractal es el índice númerico que sintetiza toda la información que contiene un sistema dinámico a analizar y puede ser utilizada para describir los rasgos de estructuras  complejas proteícas porque no se rigen por topologías enteras y formas regulares. 
 
 
-Las proteínas son  estructuras complejas que exhiban propiedades estadísticas en su aspecto y distribución, independientemente de la escala de observación. En diversos sistemas biólogicos, la dimensión fractal emerge como un índice numérico que encapsula toda la información contenida en un sistema dinámico y que puede ser aplicable para describir estructuras proteicas.
-\end{comment}
+
+
 
 \section{Antecedentes}
 
@@ -108,15 +102,6 @@ Existen objetos que tienen la propiedad de que su geometría tenga una aparienci
 La autosimilitud o invariancia de escala es la propiedad más importante en la geometría fractal porque puede modelar la complejidad de cualquier objeto. La dimensión fractal (D) es el índice numérico que cuantifica esta complejidad midiendo la tasa de adición de detalles estructurales con una mayor ampliación. Existen varias dimensiones fractales relacionadas (D). En la literatura científica puede encontrase una gran variedad de métodos para determinar la dimesión fractal (D), algunos de ellos son la dimesión fractal Hausdorff-Besicovitch y la dimesión fractal Minkowski.
 
 
-
-método de conteo de cajas
-
-Este método consiste en dividir el espacio que contiene un objeto dado en celdas o píxeles de una cierta longitud, después se cuenta el número de celdas o pixele que existen en el objeto de estudio. Este método se repite cambiando el valor de la longitud de la celda de forma logarítmica. A esto se le conoce como método de conteo de cajas, siendo una forma práctica de comprobar la autosimilitud de un patrón determinado. Un segundo método se basa en el concepto de cubrir el borde y se llama método de conteo de cajas o cuadrícula. Aquí, se utilizan conjuntos de cajas cuadradas (es decir, cuadrículas) para cubrir el borde. Cada conjunto se caracteriza por un tamaño de caja. El número de cajas necesarias para cubrir el borde se indica en función del tamaño de la caja. El registro del número de cajas de cobertura de cada tamaño multiplicado por la longitud del borde de una caja se traza contra el registro de la longitud del borde de una caja. Una vez más, es el resultado de una línea recta, con la pendiente S, y D se calcula como antes.
-
-Radio de giro
-
-Matemáticamente, el radio de giro es la distancia cuadrada media de la raíz de las partes del objeto desde su centro de masa o desde un eje dado. En realidad, es la distancia perpendicular desde la masa del punto hasta el eje de rotación. Uno puede representar una trayectoria de un punto en movimiento como un cuerpo. Entonces, el radio de giro se puede utilizar para caracterizar la distancia típica recorrida por este punto. El radio de giro de un cuerpo alrededor del eje de rotación se define como la distancia radial a un punto que tendría un momento de inercia igual que la distribución real de la masa del cuerpo, si la masa total del cuerpo se concentrara allí.
-
 Método de masa
 
 Es una medida similar al método de conteo de cajas la diferencia principal es el uso de circulos en lugar de celdas. La relación matemática de esto es:
@@ -125,10 +110,21 @@ $nu(d) = A*d^D$
 
 Donde nu(d) es el número de pixeles en una caja de tamaño d, d es el diametro longitud de la caja, A es un variable y D es la dimesión fractal. 
 
+Radio de giro
+
+El radio de giro es la distancia cuadrada media de la raíz de las partes del objeto desde su centro de masa o desde un eje dado. En realidad, es la distancia perpendicular desde la masa del punto hasta el eje de rotación. Uno puede representar una trayectoria de un punto en movimiento como un cuerpo. Entonces, el radio de giro se puede utilizar para caracterizar la distancia típica recorrida por este punto. El radio de giro de un cuerpo alrededor del eje de rotación se define como la distancia radial a un punto que tendría un momento de inercia igual que la distribución real de la masa del cuerpo, si la masa total del cuerpo se concentrara allí.
+
+
+\begin{comment}
+
+Método de conteo de cajas
+
+Este método consiste en dividir el espacio que contiene un objeto dado en celdas o píxeles de una cierta longitud, después se cuenta el número de celdas o pixele que existen en el objeto de estudio. Este método se repite cambiando el valor de la longitud de la celda de forma logarítmica. A esto se le conoce como método de conteo de cajas, siendo una forma práctica de comprobar la autosimilitud de un patrón determinado. Un segundo método se basa en el concepto de cubrir el borde y se llama método de conteo de cajas o cuadrícula. Aquí, se utilizan conjuntos de cajas cuadradas (es decir, cuadrículas) para cubrir el borde. Cada conjunto se caracteriza por un tamaño de caja. El número de cajas necesarias para cubrir el borde se indica en función del tamaño de la caja. El registro del número de cajas de cobertura de cada tamaño multiplicado por la longitud del borde de una caja se traza contra el registro de la longitud del borde de una caja. Una vez más, es el resultado de una línea recta, con la pendiente S, y D se calcula como antes.
+
+\end{comment}
+
 
 La determinacion de la dimensión fractal de estructuras en crecimiento, normalmente resulta de la aplicación directa de las definiciones para D sin embargo, esto es ineficaz. Por lo que es necesario medir o calcular cantidades que se puede demostrar que están relacionadas con la dimensión fractal de los objetos. Existen  tres tipos de enfoques principales para la determinación de estas cantidades: la experimental, el teórico y el informático. La determinación experimental representa una forma estándar de examinar los fenómenos en todos los campos de la física y también han jugado un papel importante en el desarrollo de la investigación sobre el crecimiento de los fractales. La situación es menos típica en el caso de los otros dos enfoques. Dado que la física del crecimiento fractal carece de una base teórica unificada, la mayoría de las investigaciones impulsadas por motivaciones teóricas se basan en simulación por computadora. El único principio teórico que parece ser aplicable a una gama relativamente amplia de procesos de crecimiento es la renormalización.
-
-\clearpage
 
 
 \subsection{Medición de la dimesion fractal en experimentos}
@@ -155,16 +151,14 @@ Existen varias técnicas experimentales para medir la dimensión fractal de estr
 
 Cuando se investigan propiedades multifractales, la función del sitio toma valores arbitrarios. En general, dichos conjuntos discretos de números se obtienen por dos métodos principales: i) digitalizando imágenes tomadas de objetos producidos en experimentos, ii) por procedimientos numéricos utilizados para simular diversos fenómenos de crecimiento. En el caso de crecimiento aleatorio, los datos generados numéricamente suelen producirse mediante variaciones del método de Monte Carlo. Además, también se pueden usar técnicas de enumeración exacta e integración numérica de las ecuaciones correspondientes. Hay muchas formas de determinar la dimensión fractal D a partir de datos numéricos. A continuación, discutiremos cómo medir D para un solo objeto. Para hacer las estimaciones más precisas, generalmente se calcula la dimensión fractal para muchos grupos y se promedia sobre los resultados. Quizás el método más simple es usar la definición de  D como se indica en (2.2) y (2.3). En nuestro caso, la unidad de longitud corresponde a la constante de la red, y el número de esferas de volumen unitario es válido solo si hay una equivalencia entre el escalamiento observado al cubrir la estructura con una red de cajas (conteo de cajas) y el uso de cajas de tamaño creciente centradas en el mismo punto (método de caja de arena). Esta equivalencia solo existe para fractales uniformes sin un espectro multifractal de su distribución de "masa" (ver Sección 3.4).) Por lo tanto, la dimensión fractal se puede obtener ajustando una línea recta a la parte asintótica de los datos de  N(R), por ejemplo, usando el método de mínimos cuadrados.
 
-Una variación del método anterior se usa generalmente si se registra el número total de partículas dentro de un grupo durante el crecimiento. Esta situación es común, por ejemplo, en simulaciones de Monte Carlo, donde la estructura normalmente crece mediante la adición sucesiva de partículas al objeto. En este enfoque, primero se calcula una cantidad llamada radio de giro 
+Una variación del método anterior se usa generalmente si se registra el número total de partículas dentro de un grupo durante el crecimiento. Esta situación es común, por ejemplo, en simulaciones de Monte Carlo, donde la estructura normalmente crece mediante la adición sucesiva de partículas al objeto. En este enfoque, primero se calcula una cantidad llamada radio de giro.
 
-Existen dos aspectos de la geometría fractal: el sintético y el analítico. La síntesis se refiere a la generación de imágenes o formas siguiendo ciertas reglas matemáticas. Estas imágenes pueden ser idealizadas o de aspecto natural (es decir, forjados fractales).  El análisis, por otro lado, se refiere a la extracción de información cuantitativa de conjuntos de datos, a menudo imágenes. 
-
-Multifractal
+\subsection{Multifractal}
 
 Las medidas multifactales o fractales están relacionadas con el estudio de una distribución de cantidades físicas o de otro tipo en un soporte geométrico. El soporte puede ser un plano ordinario, la superficie de un volumen, o podría ser en sí mismo un fractal. En general, un multifractal posee un número infinito de singularidades de infinitos tipos. La "multifractalidad" expresa el hecho de que los puntos correspondientes a un tipo determinado de singularidad suelen formar un subconjunto fractal cuya dimensión depende del tipo de singularidad. La idea de que un multifractal puede ser representado en términos de subconjuntos fractales entrelaizados que tienen diferentes exponentes de escala abre un nuevo reino para la aplicación de la geometría fractal a los sistemas físicos. El estudio de los multifractales es un campo en rápido desarrollo.
 
 
-6.2 Usos de la geometría fractal y D
+\subsection{Usos de la geometría fractal y D}
 
 Ahora que hemos definido D y explicado los métodos para obtenerlo, surge naturalmente la pregunta de si el conocimiento de la magnitud de la dimensión tiene alguna utilidad. Las respuestas provienen de varios experimentos en los que se ha empleado para cuantificar algunos aspectos de la morfología protéica. Dado que la estructura de las proteínas tiene una forma tan compleja que solo se puede analizar adecuadamente mediante el enfoque de la geometría fractal. 
 
@@ -177,16 +171,64 @@ Para las proteínas, otras propiedades como la densidad de las frecuencias vibra
 Muchos trabajos pioneros han demostrado una y otra vez que la proteína que tiene autosimilitud estadística puede ser manejada por el enfoque fractal. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de proteínas es cierta en lo común solo en un sentido estadístico, es decir, la parte no siempre se verá exactamente como el todo. Otra diferencia entre las macromoléculas biológicas y los objetos ideales es que una fractal no es autosimilar en todas las escalas de longitud. Hay límites de tamaño superior e inferior más allá de los cuales una macromolécula ya no es fractal. La investigación fractal sobre enzimas y proteínas es actualmente un campo activo. En el análisis fractal de proteínas, a menudo se busca una ley de poder de la forma p - v°, donde p es una propiedad; v, la variable, y a, el exponente, pueden estar relacionados con el fractal.
 
 
+\subsection{Root Mean Square y Tubulinopatías}
+
+
+\begin{comment}
+Las tubulinopatías son un grupo de enfermedades genéticas raras que afectan la función de las tubulinas, que son proteínas estructurales importantes en el citoesqueleto celular. El citoesqueleto es una red de proteínas que proporciona estructura y forma a las células y participa en varios procesos celulares, como la división celular, el transporte intracelular y la migración celular.
+
+Las tubulinas son las proteínas principales que componen los microtúbulos, estructuras cilíndricas huecas que forman parte del citoesqueleto y desempeñan un papel crucial en la división celular, el transporte intracelular de vesículas y orgánulos, y la estabilidad celular.
+
+Las tubulinopatías pueden ser causadas por mutaciones genéticas que afectan a los genes que codifican las tubulinas o las proteínas asociadas con los microtúbulos. Estas mutaciones pueden interferir con la función normal de las tubulinas y los microtúbulos, lo que resulta en una amplia variedad de manifestaciones clínicas.
+
+Las características clínicas de las tubulinopatías pueden incluir anomalías del desarrollo del sistema nervioso central, como malformaciones cerebrales, trastornos del desarrollo cognitivo y del habla, retraso en el desarrollo motor, epilepsia y trastornos del movimiento. También pueden afectar otros sistemas del cuerpo, como el sistema ocular y el sistema hematológico.
+
+Algunos ejemplos de tubulinopatías incluyen el síndrome de lissencefalia tipo 2 (también conocido como síndrome de Miller-Dieker), el síndrome de pachygyria liso, y la displasia cortical focal.
+
+Dado que las tubulinopatías son enfermedades raras, la investigación en este campo está en curso para comprender mejor su patogénesis, sus manifestaciones clínicas y para desarrollar enfoques terapéuticos dirigidos.
+\end{comment}
+
+\clearpage
 
 \section{Objetivos}
 \subsection{Objetivo general}
 
-
+Investigar como cambian los patrones de agregaciones de las proteinas y determinar si esos patrones se modifican en las proteinas.
 
 \subsection{Objetivos particulares}
 
+\begin{itemize}
+
+\item Analizar la dimesion fractal de masa y el radio de giro de un conjunto de proteínas partiendo de la definicion de multifractalidad usando datos experimentales.
+
+
+\item Enteneder si existe una diferencia entre proteínas mutadas de las sanas.
+
+\item Entender si alguna region de una proteína con una mayor o menor dimensión fractal está asociada con sitios de interacción con otras proteínas o con mutaciones relacionadas, con el obejtivo de identificar regiones específicas de una proteína que exhiba una complejidad estructural alterada en pacientes con  alguna enfermedad, 
+
+\item Desarrollar modelos predictivos que evaluen cómo las mutaciones  afectan la estructura tridimensional y la función de alguna proteína  para saber si existen implicaciones importantes para la predicción del riesgo de desarrollar alguna enfermedad.
+
+\end{itemize}
+
+\clearpage
+
 \section{Metodología}
 
+\begin{enumerate}
+	
+\item Obtención de la estructura tridimensional de la proteína: Obtener la estructura tridimensional de la proteínas que fue determinda mediante técnicas experimentales como la cristalografía de rayos X o la espectroscopia de resonancia magnética nuclear, o mediante técnicas computacionales de modelado molecular como la predicción de estructuras por homología.
+
+\item Generación de un modelo tridimensional del fractal de la proteína: Una vez que obtenida la estructura tridimensional de la proteína, se  usarán métodos computacionales para generar un modelo tridimensional del fractal de la proteína. 
+
+\item Cálculo de la dimensión fractal de masa: El cálculo de la dimensión fractal de masa implica medir cómo varía el volumen del objeto (en este caso, la proteína) con respecto a la escala a la que se está observando. Esto se puede hacer utilizando algoritmos específicos para el cálculo de la dimensión fractal de masa como el algoritmo box-counting.
+
+\item Análisis de la complejidad geométrica de la proteína: Una vez calculada la dimensión fractal de masa para la proteína: se analizará cómo varía esta dimensión en diferentes regiones de la proteína y en diferentes escalas. Esto nos permitirá caracterizar la complejidad geométrica de la proteína a diferentes niveles de detalle.
+
+\item Correlación con la función y la patología: Finalmente, se correlacionará los resultados del análisis de la dimensión fractal de masa con la función biológica de la proteína y su implicación en las tubulinopatías.  Es decir, se buscará si las regiones de la proteína con una mayor dimensión fractal de masa están asociadas con sitios de interacción con otras proteínas o con sitios de mutaciones relacionadas con las tubulinopatías.
+
+\end{enumerate}
+
+\clearpage
 
 \section{Cronograma}
 \begin{table}[hbp!]
@@ -195,7 +237,7 @@ Muchos trabajos pioneros han demostrado una y otra vez que la proteína que tien
 \setlength{\tabcolsep}{2.0pt}
 \begin{tabular}{||p{0.4\linewidth}|c|c|c|c|c|c|c|c|c|c|c|c||}
 \hline
-\textbf{Actividad} & \multicolumn{5}{c|}{2020} & \multicolumn{7}{c||}{2021}\\
+\textbf{Actividad} & \multicolumn{5}{c|}{2023} & \multicolumn{7}{c||}{2024}\\
 \hline
 & Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
 \hline
@@ -210,7 +252,7 @@ Presentación del protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
 \hline
 Preparación de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
 \hline
-& \multicolumn{5}{c|}{2021} & \multicolumn{7}{c||}{2022}\\\hline
+& \multicolumn{5}{c|}{2024} & \multicolumn{7}{c||}{2025}\\\hline
 & Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
 \hline
 & X & X &  &  &  &  &  &  &  &  &  &\\
