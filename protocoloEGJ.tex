@@ -14,10 +14,12 @@
 \documentclass[11pt]{article} 	
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{latexsym,amssymb,amsfonts}
 \usepackage[usenames]{color}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{verbatim}
+
 \usepackage{amsmath,mathtools}
 \usepackage[font={small},format=plain,labelfont=bf]{caption} % Size and format of foot of figures and tables
 \usepackage{color}
@@ -86,7 +88,7 @@ FCQ - BUAP & FCQ - BUAP \\
 
 \section{Introducción}
 
-La determinación de estructuras que tienen la propiedad de que su aspecto y distribución sea estadística y que no cambie a cualquiera que sea la escala a la que se analice, se presente en un gran número de sistemas complejos, como lo son las proteínas, la dimesión fractal es el índice númerico que sintetiza toda la información que contiene un sistema dinámico a analizar y puede ser utilizada para describir los rasgos de estructuras  complejas proteícas porque no se rigen por topologías enteras y formas regulares. 
+La determinación de estructuras que tienen la propiedad de que su aspecto y distribución sea estadística y que no cambie a cualquiera que sea la escala a la que se analice, se presente en un gran número de sistemas complejos, como lo son las proteínas, la dimesión fractal es el índice númerico que sintetiza toda la información que contiene un sistema dinámico a analizar y puede ser utilizada para describir los rasgos de estructuras  complejas proteícas porque no se rigen por topologías enteras y formas regulares \cite{Mandelbrot1997}. 
 
 
 
@@ -96,66 +98,78 @@ La determinación de estructuras que tienen la propiedad de que su aspecto y dis
 
 
 
-Existen objetos que tienen la propiedad de que su geometría tenga una apariencia fragmentada o con una morfología aparentemente irregular y que no cambie a cualquiera que sea la escala a la que se analice, a estos objetos se les conoce como fractales. Los fractales están presentes en un gran número de sistemas complejos que van desde agregados microscópicos hasta cúmulos de galaxias, por lo tanto, existen objetos que se pueden describir en términos de geometría fractal. 
+Existen objetos que tienen la propiedad de que su geometría tenga una apariencia fragmentada o con una morfología aparentemente irregular y que no cambie a cualquiera que sea la escala a la que se analice, a estos objetos se les conoce como fractales. Los fractales están presentes en un gran número de sistemas complejos que van desde agregados microscópicos hasta cúmulos de galaxias, por lo tanto, existen objetos que se pueden describir en términos de geometría fractal \cite{Vicsek1992}. 
 
-La autosimilitud o invariancia de escala es la propiedad más importante en la geometría fractal porque puede modelar la complejidad de cualquier objeto. La dimensión fractal (D) es el índice numérico que cuantifica esta complejidad midiendo la tasa de adición de detalles estructurales con una mayor ampliación. Existen varias dimensiones fractales relacionadas (D). En la literatura científica puede encontrase una gran variedad de métodos para determinar la dimesión fractal (D), algunos de ellos son la dimesión fractal Hausdorff-Besicovitch y la dimesión fractal Minkowski.
+La autosimilitud o invariancia de escala es la propiedad más importante en la geometría fractal porque puede modelar la complejidad de cualquier objeto. La dimensión fractal \textbf{(D)} es el índice numérico que cuantifica esta complejidad midiendo la tasa de adición de detalles estructurales con una mayor ampliación. En la literatura científica puede encontrase una gran variedad de métodos para determinar la dimesión fractal, algunos de ellos son la dimesión fractal Hausdorff-Besicovitch y la dimesión fractal Minkowski.
+
+\subsection{Método de conteo de cajas o box-counting}
+
+Este método consiste en dividir el espacio que contiene un objeto dado en celdas o píxeles de una cierta longitud, después se cuenta el número de celdas o píxeles que existen en el objeto de estudio. Este método se repite cambiando el valor de la longitud de la celda de forma logarítmica, esta es una forma práctica de comprobar la autosimilitud de un patrón determinado, Especificamente se utilizan  varios conjuntos de cajas cuadradas (es decir, cuadrículas) para cubrir el borde. Cada conjunto se caracteriza por un tamaño de caja. El número de cajas necesarias para cubrir el borde se indica en función del tamaño de la caja. El registro del número de cajas de cobertura de cada tamaño multiplicado por la longitud del borde de una caja se traza contra el registro de la longitud del borde de una caja. Una vez más, es el resultado de una línea recta, con la pendiente S, y D se calcula como antes.
+
+\subsection{Método de masa}
+
+Es una medida similar al método de conteo de cajas o box-counting, la diferencia principal es el uso de circulos en lugar de celdas o píxeles. Consiste en selecionar un punto de origen en el objeto de estudio (que usualmente es el centro de masas) y contar el número de partículas (masa = círculos) que componen 	el objeto en un radio r desde el origen \cite{Mustafa1996}. Para dos dimesiones el objeto Euclidiano (un plano), la relación entre masa y radio es:
+
+\begin{equation}
+M(r) \propto r^{2}
+\end{equation}
 
 
-Método de masa
+Por ejemplo, el área de un plano bajo discos de tamaño creciente es proporcional al cuadrado del radio del disco de medición. El exponente es por tanto la dimensión (de hecho, un cuadrado es bidimensional), pero la masa de un objeto fractal incrustado en dos dimensiones cambia con un exponente fraccionario: $M(r) \propto r^{2}$ y la dimensión fractal $D_\textit{{masa-radio}}$ se obtiene de:
 
-Es una medida similar al método de conteo de cajas la diferencia principal es el uso de circulos en lugar de celdas. La relación matemática de esto es:
+\begin{equation}
+D_\textit{masa radio} = \frac{log (M(r))}{log (r)}
+\end{equation}
+
+Se calcula como la pendiente de la regresión lineal de $log(M(r))$ de $log(r)$.
+
+
 
 $nu(d) = A*d^D$
 
 Donde nu(d) es el número de pixeles en una caja de tamaño d, d es el diametro longitud de la caja, A es un variable y D es la dimesión fractal. 
 
-Radio de giro
+\clearpage
+
+
+\subsection{Radio de giro}
 
 El radio de giro es la distancia cuadrada media de la raíz de las partes del objeto desde su centro de masa o desde un eje dado. En realidad, es la distancia perpendicular desde la masa del punto hasta el eje de rotación. Uno puede representar una trayectoria de un punto en movimiento como un cuerpo. Entonces, el radio de giro se puede utilizar para caracterizar la distancia típica recorrida por este punto. El radio de giro de un cuerpo alrededor del eje de rotación se define como la distancia radial a un punto que tendría un momento de inercia igual que la distribución real de la masa del cuerpo, si la masa total del cuerpo se concentrara allí.
 
 
-\begin{comment}
-
-Método de conteo de cajas
-
-Este método consiste en dividir el espacio que contiene un objeto dado en celdas o píxeles de una cierta longitud, después se cuenta el número de celdas o pixele que existen en el objeto de estudio. Este método se repite cambiando el valor de la longitud de la celda de forma logarítmica. A esto se le conoce como método de conteo de cajas, siendo una forma práctica de comprobar la autosimilitud de un patrón determinado. Un segundo método se basa en el concepto de cubrir el borde y se llama método de conteo de cajas o cuadrícula. Aquí, se utilizan conjuntos de cajas cuadradas (es decir, cuadrículas) para cubrir el borde. Cada conjunto se caracteriza por un tamaño de caja. El número de cajas necesarias para cubrir el borde se indica en función del tamaño de la caja. El registro del número de cajas de cobertura de cada tamaño multiplicado por la longitud del borde de una caja se traza contra el registro de la longitud del borde de una caja. Una vez más, es el resultado de una línea recta, con la pendiente S, y D se calcula como antes.
-
-\end{comment}
-
-
-La determinacion de la dimensión fractal de estructuras en crecimiento, normalmente resulta de la aplicación directa de las definiciones para D sin embargo, esto es ineficaz. Por lo que es necesario medir o calcular cantidades que se puede demostrar que están relacionadas con la dimensión fractal de los objetos. Existen  tres tipos de enfoques principales para la determinación de estas cantidades: la experimental, el teórico y el informático. La determinación experimental representa una forma estándar de examinar los fenómenos en todos los campos de la física y también han jugado un papel importante en el desarrollo de la investigación sobre el crecimiento de los fractales. La situación es menos típica en el caso de los otros dos enfoques. Dado que la física del crecimiento fractal carece de una base teórica unificada, la mayoría de las investigaciones impulsadas por motivaciones teóricas se basan en simulación por computadora. El único principio teórico que parece ser aplicable a una gama relativamente amplia de procesos de crecimiento es la renormalización.
+La determinacion de la dimensión fractal de estructuras en crecimiento, normalmente resulta de la aplicación directa de las definiciones para D, sin embargo, esto es ineficaz. Es necesario medir o calcular cantidades que se puede demostrar que están relacionadas con la dimensión fractal de los objetos. Existen  tres tipos de enfoques principales para la determinación de estas cantidades: la experimental, el teórico y el informático. La determinación experimental representa una forma estándar de examinar los fenómenos en todos los campos de la física y también han jugado un papel importante en el desarrollo de la investigación sobre el crecimiento de los fractales. La situación es menos típica en el caso de los otros dos enfoques. Dado que la física del crecimiento fractal carece de una base teórica unificada, la mayoría de las investigaciones impulsadas por motivaciones teóricas se basan en simulación por computadora.
 
 
 \subsection{Medición de la dimesion fractal en experimentos}
 
-Existen varias técnicas experimentales para medir la dimensión fractal de estructuras invariantes. Los métodos más utilizados se pueden dividir en cuantro categorías:
+Existen varias técnicas experimentales para medir la dimensión fractal de estructuras invariantes. Los métodos más utilizados se pueden dividir en cuatro categorías:
 
 \begin{enumerate}
-\item Procesamiento de imágenes digitales de imágenes bidimensionales.
+\item Procesamiento de imágenes digitales (bidimensionales).
 \item Experimentos de dispersión.
-\item Cubrir las estructuras con monocapas. 
+\item Cubrimiento de las estructuras con monocapas. 
 \item Medición directa de propiedades físicas dependientes de la dimensión.
 \end{enumerate}
 
 (1) Digitalizar la imagen de un objeto fractal es una forma estándar de obtener datos cuantitativos sobre formas geométricas. La información es captada por un escáner o una cámara de video ordinaria y se transmite a la memoria de una computadora (típicamente una PC). Los datos se almacenan en forma de una matriz bidimensional de píxeles cuyos elementos no nulos (o que son cero) corresponden a las regiones ocupadas (no ocupadas) por la imagen. Una vez en la computadora, los datos pueden ser evaluados utilizando los métodos descritos.
 
-(2) Los experimentos de dispersión son un método poderoso para medir la dimensión fractal de estructuras microscópicas (Teixeira 1986). Dependiendo de las escalas de longitud características asociadas con el objeto a ser estudiado, se pueden usar luz, rayos X o dispersión de neutrones para revelar propiedades fractales. Hay varias posibilidades para llevar a cabo un experimento de dispersión. Se puede investigar i) el factor de estructura de un solo objeto fractal, ii) la dispersión por múltiples agrupaciones que crecen con el tiempo, iii) el haz dispersado de una superficie fractal, entre otros.
+(2) Los experimentos de dispersión son un método poderoso para medir la dimensión fractal de estructuras microscópicas. Dependiendo de las escalas de longitud características asociadas con el objeto a ser estudiado, se pueden usar luz, rayos X o dispersión de neutrones para revelar propiedades fractales. Hay varias posibilidades para llevar a cabo un experimento de dispersión. Se puede investigar i) el factor de estructura de un solo objeto fractal, ii) la dispersión por múltiples agrupaciones que crecen con el tiempo, iii) el haz dispersado de una superficie fractal, entre otros \cite{Vicsek1992}.
 
-(3) La medida de las dimensiones fractales cubriendo la estructura con partículas de sondeo de varios radios (por ejemplo, Pfeifer y Avnir 1983) es una idea obvia que está directamente relacionada con las definiciones de fractales. Para llevar a cabo una investigación de este tipo, se deben encontrar materiales que se adsorban bien en la superficie de los objetos. Además, la diferencia entre los radios más pequeño y más grande de las moléculas debe ser lo suficientemente grande para que el método pueda cubrir al menos dos o tres órdenes de magnitud.
+(3) La medida de las dimensiones fractales cubriendo la estructura con partículas de sondeo de varios radios es una idea obvia que está directamente relacionada con las definiciones de fractales. Para llevar a cabo una investigación de este tipo, se deben encontrar materiales que se adsorban bien en la superficie de los objetos. Además, la diferencia entre los radios más pequeño y más grande de las moléculas debe ser lo suficientemente grande para que el método pueda cubrir al menos dos o tres órdenes de magnitud.
 
 
 (4) Las mediciones de propiedades físicas de objetos fractales también pueden usarse para la determinación experimental de D. Se han sugerido varios métodos, la mayoría de ellos basados en propiedades eléctricas, incluyendo mediciones de corriente, disipación de potencia electromagnética y dependencia de frecuencia de la impedancia compleja de interfaces fractales. Estos métodos generalmente proporcionan una estimación indirecta del cálculo de D y se han utilizado menos extensamente que los enfoques mencionados anteriormente.
 
-\subsection{Evaluación de datos numéricos}
-
-Cuando se investigan propiedades multifractales, la función del sitio toma valores arbitrarios. En general, dichos conjuntos discretos de números se obtienen por dos métodos principales: i) digitalizando imágenes tomadas de objetos producidos en experimentos, ii) por procedimientos numéricos utilizados para simular diversos fenómenos de crecimiento. En el caso de crecimiento aleatorio, los datos generados numéricamente suelen producirse mediante variaciones del método de Monte Carlo. Además, también se pueden usar técnicas de enumeración exacta e integración numérica de las ecuaciones correspondientes. Hay muchas formas de determinar la dimensión fractal D a partir de datos numéricos. A continuación, discutiremos cómo medir D para un solo objeto. Para hacer las estimaciones más precisas, generalmente se calcula la dimensión fractal para muchos grupos y se promedia sobre los resultados. Quizás el método más simple es usar la definición de  D como se indica en (2.2) y (2.3). En nuestro caso, la unidad de longitud corresponde a la constante de la red, y el número de esferas de volumen unitario es válido solo si hay una equivalencia entre el escalamiento observado al cubrir la estructura con una red de cajas (conteo de cajas) y el uso de cajas de tamaño creciente centradas en el mismo punto (método de caja de arena). Esta equivalencia solo existe para fractales uniformes sin un espectro multifractal de su distribución de "masa" (ver Sección 3.4).) Por lo tanto, la dimensión fractal se puede obtener ajustando una línea recta a la parte asintótica de los datos de  N(R), por ejemplo, usando el método de mínimos cuadrados.
-
-Una variación del método anterior se usa generalmente si se registra el número total de partículas dentro de un grupo durante el crecimiento. Esta situación es común, por ejemplo, en simulaciones de Monte Carlo, donde la estructura normalmente crece mediante la adición sucesiva de partículas al objeto. En este enfoque, primero se calcula una cantidad llamada radio de giro.
 
 \subsection{Multifractalidad}
 
-Las medidas multifactales o fractales están relacionadas con el estudio de una distribución de cantidades físicas o de otro tipo en un soporte geométrico. El soporte puede ser un plano ordinario, la superficie de un volumen, o podría ser en sí mismo un fractal. En general, un multifractal posee un número infinito de singularidades de infinitos tipos. La "multifractalidad" expresa el hecho de que los puntos correspondientes a un tipo determinado de singularidad suelen formar un subconjunto fractal cuya dimensión depende del tipo de singularidad. La idea de que un multifractal puede ser representado en términos de subconjuntos fractales entrelaizados que tienen diferentes exponentes de escala abre un nuevo reino para la aplicación de la geometría fractal a los sistemas físicos. El estudio de los multifractales es un campo en rápido desarrollo.
+Las medidas multifactales o fractales están relacionadas con el estudio de una distribución de cantidades físicas o de otro tipo en un soporte geométrico. El soporte puede ser un plano ordinario, la superficie de un volumen, o podría ser en sí mismo un fractal. En general, un multifractal posee un número infinito de singularidades de infinitos tipos. La multifractalidad expressa el hecho de que los puntos correspondientes a un tipo determinado de singularidad suelen formar un subconjunto fractal cuya dimensión depende del tipo de singularidad. La idea de que un multifractal puede ser representado en términos de subconjuntos fractales entrelaizados que tienen diferentes exponentes de escala.
 
+\subsection{Evaluación de datos numéricos}
+
+Cuando se investigan propiedades multifractales, la función del sitio toma valores arbitrarios. En general, dichos conjuntos discretos de números se obtienen por dos métodos principales: i) digitalizando imágenes tomadas de objetos producidos en experimentos, ii) por procedimientos numéricos utilizados para simular diversos fenómenos de crecimiento. En el caso de crecimiento aleatorio, los datos generados numéricamente suelen producirse mediante variaciones del método de Monte Carlo. Hay muchas formas de determinar la dimensión fractal D a partir de datos numéricos. A continuación, discutiremos cómo medir D para un solo objeto. Para hacer las estimaciones más precisas, generalmente se calcula la dimensión fractal para muchos grupos y se promedia sobre los resultados. Quizás el método más simple es usar la definición de  D como se indica en (2.2) y (2.3). En nuestro caso, la unidad de longitud corresponde a la constante de la red, y el número de esferas de volumen unitario es válido solo si hay una equivalencia entre el escalamiento observado al cubrir la estructura con una red de cajas (conteo de cajas) y el uso de cajas de tamaño creciente centradas en el mismo punto (método de caja de arena). Esta equivalencia solo existe para fractales uniformes sin un espectro multifractal de su distribución de "masa" (ver Sección 3.4).) Por lo tanto, la dimensión fractal se puede obtener ajustando una línea recta a la parte asintótica de los datos de  N(R), por ejemplo, usando el método de mínimos cuadrados.
+
+Una variación del método anterior se usa generalmente si se registra el número total de partículas dentro de un grupo durante el crecimiento. Esta situación es común, por ejemplo, en simulaciones Monte Carlo, donde la estructura normalmente crece mediante la adición sucesiva de partículas al objeto. En este enfoque, primero se calcula el radio de giro.
 
 \subsection{Usos de la geometría fractal y D}
 
@@ -269,7 +283,7 @@ Preparación de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
 \hline
 Curso de Termodinámica Estadística & X & X & X & X & X &  &  &  &  &  &  &\\
 \hline
-Reunión Mexicana de Fisicoquímica teórica &  &  &  & X &  &  &  &  &  &  &  &\\
+XXII RMFQT &  &  &  & X &  &  &  &  &  &  &  &\\
 \hline
 XXlX Simposio interno FCQ - ICUAP &  &  &  & X &  &  &  &  &  &  &  &\\
 \hline
@@ -291,7 +305,7 @@ Examen &  &  &  &  &  &  &  &  &  &  &  & X\\
 
 \clearpage
 
-\bibliographystyle{ieeetr}
+\bibliographystyle{plain}
 \bibliography{bibliografia}
 
 \end{document}
