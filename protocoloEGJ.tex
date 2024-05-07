@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Protocolo Laboratorio de Fisicoquímica Teórica 
+% Protocolo Laboratorio de Fisicoqu\'{i}mica Te\'{o}rica 
 % LaTeX Template
 % Version 0.1 (10/12/17)
 %
 % Part of this template was downloaded from:
 % http://www.LaTeXTemplates.com
 %
-% Edgar García Juarez (b613) edgargj.16@gmail.com
+% Edgar Garc\'{i}a Juarez (b613) edgargj.16@gmail.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------------------------------------------------------------------------% 
 % Packages
@@ -57,27 +57,29 @@
 \vspace{-1.4cm}
 \begin{center}
 \includegraphics[width=4cm]{buap.pdf}
+%\includegraphics[width=4cm]{fcq.pdf}
 
-\Large{\textbf{Benemérita Universidad Autónoma de Puebla}\\
+\Large{\textbf{Benem\'{e}rita Universidad Aut\'{o}noma de Puebla}\\
 \rule{150mm}{0.1mm}\\
-Facultad de Ciencias Químicas\\
-Centro de Química - Instituto de Ciencias\\
-Posgrado en Ciencias Qímicas}\\
+Facultad de Ciencias Qu\'{i}micas\\
+Centro de Qu\'{i}mica - Instituto de Ciencias\\
+Posgrado en Ciencias Qu\'{i}micas}\\
 \rule{150mm}{0.1mm}
 
 \vtab[.1cm]
-{\scshape\large \textbf{``La dimesión fractal  de masa como medida caracterizadora de la estructura de las proteínas''} \par}
+{\scshape\large \textbf{La dimensi\'{o}n fractal de masa como medida caracterizadora\\de la estructura de las prote\'{i}nas}}\\
 \vtab[.1cm]
-\Large{Protocolo de tesis de Maestría}\\
+\Large{Protocolo de tesis de Maestr\'{i}a}\\
 \vtab[0.2cm]
 
-Lic. en Química \\
-Édgar García Juárez \\
+Lic. en Qu\'{i}mica \\
+Edgar Garc\'{i}a Ju\'{a}rez \\
 \vtab[0.5cm]
 \begin{tabular}{cc}
 \vtab[10mm]
 Director de tesis & Co-directora de tesis \\
-Dr. J. Manuel Solano Altamirano & Dra. Viridiana Vargas Castro \\ 
+\rule{50mm}{0.1mm} & \rule{50mm}{0.1mm} \\
+Dr. J. M. Solano Altamirano & Dra. Viridiana Vargas Castro \\ 
 FCQ - BUAP & FCQ - BUAP \\ 
 \end{tabular} 
 \vtab[1cm] \\
@@ -86,168 +88,175 @@ FCQ - BUAP & FCQ - BUAP \\
 
 \clearpage
 
-\section{Introducción}
+\section{Introducci\'{o}n}
 
-La determinación de estructuras que tienen la propiedad de que su aspecto y distribución sea estadística y que no cambie a cualquiera que sea la escala a la que se analice, se presente en un gran número de sistemas complejos, como lo son las proteínas, la dimesión fractal es el índice númerico que sintetiza toda la información que contiene un sistema dinámico a analizar y puede ser utilizada para describir los rasgos de estructuras  complejas proteícas porque no se rigen por topologías enteras y formas regulares \cite{Mandelbrot1997}. 
-
-
+A pesar de su aparente simplicidad, el problema de cuantificar las diferencias entre dos estruc-
+turas de la misma prote\'{i}na no es trivial y continúa evolucionando. Debido a que el aspecto y distribuci\'{o}n de las prote\'{i}nas es aparentemente desordenado, la dimensi\'{o}n fractal  puede sintetizar toda la informaci\'{o}n que contienen estos sistemas. 
 
 
 
 \section{Antecedentes}
 
+\subsection{Fractal y dimesi\'{o}n fractal}
+\label{subsec:subseccion2.1}
 
 
-Existen objetos que tienen la propiedad de que su geometría tenga una apariencia fragmentada o con una morfología aparentemente irregular y que no cambie a cualquiera que sea la escala a la que se analice, a estos objetos se les conoce como fractales. Los fractales están presentes en un gran número de sistemas complejos que van desde agregados microscópicos hasta cúmulos de galaxias, por lo tanto, existen objetos que se pueden describir en términos de geometría fractal \cite{Vicsek1992}. 
+Existen objetos que tienen la propiedad de que su geometr\'{i}a tenga una apariencia fragmentada o con una morfolog\'{i}a aparentemente irregular y que no cambia a cualquiera que sea la escala a la que se analice; a estos objetos se les conoce como fractales. Los fractales est\'{a}n presentes en un gran n\'{u}mero de sistemas complejos que van desde agregados microsc\'{o}picos hasta c\'{u}mulos de galaxias, por lo tanto, existen objetos que se pueden describir en t\'{e}rminos de su geometr\'{i}a fractal \cite{Vicsek1992}. 
 
-La autosimilitud o invariancia de escala es la propiedad más importante en la geometría fractal porque puede modelar la complejidad de cualquier objeto. La dimensión fractal \textbf{(D)} es el índice numérico que cuantifica esta complejidad midiendo la tasa de adición de detalles estructurales con una mayor ampliación. En la literatura científica puede encontrase una gran variedad de métodos para determinar la dimesión fractal, algunos de ellos son la dimesión fractal Hausdorff-Besicovitch y la dimesión fractal Minkowski.
+La autosimilitud o invariancia de escala es la propiedad m\'{a}s importante en la geometr\'{i}a fractal porque puede modelar la complejidad de cualquier objeto. La dimensi\'{o}n fractal \textbf{(D)} es el \'{i}ndice num\'{e}rico que cuantifica esta complejidad, midiendo la tasa de adici\'{o}n de detalles estructurales con una mayor ampliaci\'{o}n.
 
-\subsection{Método de conteo de cajas o box-counting}
+En la literatura cient\'{i}fica puede encontrase una gran variedad de m\'{e}todos para determinar la dimensi\'{o}n fractal, algunos de ellos son la dimensi\'{o}n fractal Hausdorff-Besicovitch, la dimensi\'{o}n fractal Minkowski y la dimesi\'{o}n de fractal por conteo de cajas. La dimensi\'{o}n fractal puede representarse como:
 
-Este método consiste en dividir el espacio que contiene un objeto dado en celdas o píxeles de una cierta longitud, después se cuenta el número de celdas o píxeles que existen en el objeto de estudio. Este método se repite cambiando el valor de la longitud de la celda de forma logarítmica, esta es una forma práctica de comprobar la autosimilitud de un patrón determinado, Especificamente se utilizan  varios conjuntos de cajas cuadradas (es decir, cuadrículas) para cubrir el borde. Cada conjunto se caracteriza por un tamaño de caja. El número de cajas necesarias para cubrir el borde se indica en función del tamaño de la caja. El registro del número de cajas de cobertura de cada tamaño multiplicado por la longitud del borde de una caja se traza contra el registro de la longitud del borde de una caja. Una vez más, es el resultado de una línea recta, con la pendiente S, y D se calcula como antes.
+\begin{equation}
+ D = \frac{\ln(N)}{\ln(1/\varepsilon)}
+\end{equation}
 
-\subsection{Método de masa}
+Donde \(N\) es el n\'{u}mero de unidades constitutivas en la generaci\'{o}n actual que han emergido de una unidad constitutiva en la generaci\'{o}n anterior, cuando se avanza en la construcci\'{o}n del patr\'{o}n una etapa m\'{a}s adelante, o el n\'{u}mero de iniciadores reducidos que constituyen el generador. Se puede generalizar la ecuaci\'{o}n anterior para examinar la autosimilitud de varios patrones aleatorios y determinar \(D\).
+ 
+\subsection{Determinacion de la dimensi\'{o}n fractal}
+\label{subsec:subseccion2.2}
 
-Es una medida similar al método de conteo de cajas o box-counting, la diferencia principal es el uso de circulos en lugar de celdas o píxeles. Consiste en selecionar un punto de origen en el objeto de estudio (que usualmente es el centro de masas) y contar el número de partículas (masa = círculos) que componen 	el objeto en un radio r desde el origen \cite{Mustafa1996}. Para dos dimesiones el objeto Euclidiano (un plano), la relación entre masa y radio es:
 
+La determinacion de la dimensi\'{o}n fractal de estructuras en crecimiento, normalmente resulta de la aplicaci\'{o}n directa de las definiciones para D, sin embargo, esto es ineficaz. Es necesario medir o calcular cantidades que se puede demostrar que est\'{a}n relacionadas con la dimensi\'{o}n fractal de los objetos. Existen  tres tipos de enfoques principales para la determinaci\'{o}n de estas cantidades: (i) el experimental, (ii) el te\'{o}rico y (iii) el inform\'{a}tico \cite{Vicsek1992}. El enfoque inform\'{a}tico se obtienen por dos m\'{e}todos principales: 
+
+
+\begin{enumerate}
+\item Digitalizando im\'{a}genes tomadas de objetos producidos en experimentos.
+\item Usando procedimientos num\'{e}ricos utilizados para simular diversos fen\'{o}menos de crecimiento.
+\end{enumerate}
+ 
+  En el segundo caso, los datos generados num\'{e}ricamente suelen producirse mediante variaciones del m\'{e}todo de Monte Carlo. A continuaci\'{o}n, discutiremos c\'{o}mo medir D para un solo objeto. Para hacer las estimaciones m\'{a}s precisas, generalmente se calcula la dimensi\'{o}n fractal para muchos grupos y se promedia sobre los resultados. Quiz\'{a}s, el m\'{e}todo m\'{a}s simple es usar la definici\'{o}n de  D como se indica en \ref{subsec:subseccion2.1}. Por lo tanto, la dimensi\'{o}n fractal se puede obtener ajustando una l\'{i}nea recta a la parte asint\'{o}tica de los datos de  N(R), por ejemplo, usando el m\'{e}todo de m\'{i}nimos cuadrados \cite{Vicsek1992}.
+
+\subsection{M\'{e}todo de conteo de cajas}
+
+Este m\'{e}todo consiste en dividir el espacio que contiene un patr\'{o}n dado en celdas o p\'{i}xeles de longitud (E), despu\'{e}s se cuenta el n\'{u}mero de celdas o p\'{i}xeles que existen \(N(E)\). El n\'{u}mero \(N(E)\) se mide variando el valor de \(E\) y traz\'{a}ndolo en escala logar\'{i}tmica frente a \(E\), esta es una forma pr\'{a}ctica de comprobar la autosimilitud de un patr\'{o}n determinado. Si los puntos se ajustan a una l\'{i}nea recta, se puede concluir que el patr\'{o}n dado es autosimilar, y la dimensi\'{o}n fractal \(D\) se obtiene del valor de la pendiente de la l\'{i}nea \cite{Mustafa1996}. 
+
+\subsection{Relaci\'{o}n entre Masa y radio}
+
+La relaci\'{o}n masa-radio es \'{u}til para estimar la dimensi\'{o}n de objetos similares a grupos (redes, vasos sangu\'{i}neos, grupos de agregaci\'{o}n). Consiste en seleccionar un punto de origen en el objeto (normalmente el centro de masa) y contar el n\'{u}mero de part\'{i}culas (masa = p\'{i}xeles) que componen el objeto en un radio del origen. Para un objeto euclidiano bidimensional, la relaci\'{o}n masa-radio es:
 \begin{equation}
 M(r) \propto r^{2}
 \end{equation}
 
+Por ejemplo, el \'{a}rea de un plano bajo discos de tamaño creciente es proporcional al cuadrado del radio del disco de medici\'{o}n. El exponente es por tanto la dimensi\'{o}n (de hecho, un cuadrado es bidimensional), pero la masa de un objeto fractal incrustado en dos dimensiones cambia con un exponente fraccionario:
 
-Por ejemplo, el área de un plano bajo discos de tamaño creciente es proporcional al cuadrado del radio del disco de medición. El exponente es por tanto la dimensión (de hecho, un cuadrado es bidimensional), pero la masa de un objeto fractal incrustado en dos dimensiones cambia con un exponente fraccionario: $M(r) \propto r^{2}$ y la dimensión fractal $D_\textit{{masa-radio}}$ se obtiene de:
+\begin{equation}
+M(r) \propto r^{D} 
+\end{equation}
+
+Y la dimensi\'{o}n fractal $D_\textit{{masa-radio}}$ se obtiene de:
 
 \begin{equation}
 D_\textit{masa radio} = \frac{log (M(r))}{log (r)}
 \end{equation}
 
-Se calcula como la pendiente de la regresión lineal de $log(M(r))$ de $log(r)$.
+Se calcula como la pendiente de la regresi\'{o}n lineal de $log(M(r))$ de $log(r)$ \cite{Mustafa1996}.
 
 
+\subsection{M\'{e}todo de masa}
 
-$nu(d) = A*d^D$
+Es una medida similar al m\'{e}todo de conteo de cajas, la diferencia principal es el uso de c\'{i}rculos en lugar de celdas o p\'{i}xeles. Consiste en selecionar un punto de origen en el objeto de estudio (que usualmente es el centro de masas) y contar el n\'{u}mero de part\'{i}culas (masa = c\'{i}rculos) que componen 	el objeto en un radio r desde el origen. Para dos dimesiones la relaci\'{o}n entre masa y radio es:
 
-Donde nu(d) es el número de pixeles en una caja de tamaño d, d es el diametro longitud de la caja, A es un variable y D es la dimesión fractal. 
+\begin{equation}
+\mu(d) = Ad^D
+\end{equation}
 
-\clearpage
-
+Donde $\mu(d)$ es el n\'{u}mero de pixeles en una caja de tamaño d, d es el di\'{a}metro longitud de la caja, A es un variable y D es la dimensi\'{o}n fractal\cite{Mustafa1996}. 
 
 \subsection{Radio de giro}
 
-El radio de giro es la distancia cuadrada media de la raíz de las partes del objeto desde su centro de masa o desde un eje dado. En realidad, es la distancia perpendicular desde la masa del punto hasta el eje de rotación. Uno puede representar una trayectoria de un punto en movimiento como un cuerpo. Entonces, el radio de giro se puede utilizar para caracterizar la distancia típica recorrida por este punto. El radio de giro de un cuerpo alrededor del eje de rotación se define como la distancia radial a un punto que tendría un momento de inercia igual que la distribución real de la masa del cuerpo, si la masa total del cuerpo se concentrara allí.
+Existen estructuras que crecen mediante la adici\'{o}n sucesiva de part\'{i}culas al objeto. Esta situaci\'{o}n es com\'{u}n, por ejemplo, en simulaciones de Monte Carlo, donde se registra el n\'{u}mero total de part\'{i}culas dentro de un c\'{u}mulo durante el crecimiento. Por lo tanto, es necesario calcular una cantidad llamada radio de giro  \(R_g(N)\) usando la siguiente expresi\'{o}n:
 
+\begin{equation}
+R_g = \sqrt{\frac{1}{N} \sum_{i=1}^{N} \| r_i - r_c \|^2}
+\end{equation}
 
-La determinacion de la dimensión fractal de estructuras en crecimiento, normalmente resulta de la aplicación directa de las definiciones para D, sin embargo, esto es ineficaz. Es necesario medir o calcular cantidades que se puede demostrar que están relacionadas con la dimensión fractal de los objetos. Existen  tres tipos de enfoques principales para la determinación de estas cantidades: la experimental, el teórico y el informático. La determinación experimental representa una forma estándar de examinar los fenómenos en todos los campos de la física y también han jugado un papel importante en el desarrollo de la investigación sobre el crecimiento de los fractales. La situación es menos típica en el caso de los otros dos enfoques. Dado que la física del crecimiento fractal carece de una base teórica unificada, la mayoría de las investigaciones impulsadas por motivaciones teóricas se basan en simulación por computadora.
+donde \(r_i\) es la distancia de la \(i\)\'{e}sima part\'{i}cula desde el centro de masa del c\'{u}mulo y \(N\) es el n\'{u}mero total de part\'{i}culas en el c\'{u}mulo en la etapa dada del proceso de crecimiento. Luego, se asume que:
 
+\begin{equation}
+R_g(N) \approx N^{1/D}
+\end{equation}
 
-\subsection{Medición de la dimesion fractal en experimentos}
-
-Existen varias técnicas experimentales para medir la dimensión fractal de estructuras invariantes. Los métodos más utilizados se pueden dividir en cuatro categorías:
-
-\begin{enumerate}
-\item Procesamiento de imágenes digitales (bidimensionales).
-\item Experimentos de dispersión.
-\item Cubrimiento de las estructuras con monocapas. 
-\item Medición directa de propiedades físicas dependientes de la dimensión.
-\end{enumerate}
-
-(1) Digitalizar la imagen de un objeto fractal es una forma estándar de obtener datos cuantitativos sobre formas geométricas. La información es captada por un escáner o una cámara de video ordinaria y se transmite a la memoria de una computadora (típicamente una PC). Los datos se almacenan en forma de una matriz bidimensional de píxeles cuyos elementos no nulos (o que son cero) corresponden a las regiones ocupadas (no ocupadas) por la imagen. Una vez en la computadora, los datos pueden ser evaluados utilizando los métodos descritos.
-
-(2) Los experimentos de dispersión son un método poderoso para medir la dimensión fractal de estructuras microscópicas. Dependiendo de las escalas de longitud características asociadas con el objeto a ser estudiado, se pueden usar luz, rayos X o dispersión de neutrones para revelar propiedades fractales. Hay varias posibilidades para llevar a cabo un experimento de dispersión. Se puede investigar i) el factor de estructura de un solo objeto fractal, ii) la dispersión por múltiples agrupaciones que crecen con el tiempo, iii) el haz dispersado de una superficie fractal, entre otros \cite{Vicsek1992}.
-
-(3) La medida de las dimensiones fractales cubriendo la estructura con partículas de sondeo de varios radios es una idea obvia que está directamente relacionada con las definiciones de fractales. Para llevar a cabo una investigación de este tipo, se deben encontrar materiales que se adsorban bien en la superficie de los objetos. Además, la diferencia entre los radios más pequeño y más grande de las moléculas debe ser lo suficientemente grande para que el método pueda cubrir al menos dos o tres órdenes de magnitud.
-
-
-(4) Las mediciones de propiedades físicas de objetos fractales también pueden usarse para la determinación experimental de D. Se han sugerido varios métodos, la mayoría de ellos basados en propiedades eléctricas, incluyendo mediciones de corriente, disipación de potencia electromagnética y dependencia de frecuencia de la impedancia compleja de interfaces fractales. Estos métodos generalmente proporcionan una estimación indirecta del cálculo de D y se han utilizado menos extensamente que los enfoques mencionados anteriormente.
-
+Por lo tanto, \(1/D\) se puede obtener de la pendiente del gr\'{a}fico de \(\ln(R_g)\) como funci\'{o}n de \(\ln(N)\). Esta relaci\'{o}n corresponde a las siguientes suposiciones: i) en el r\'{e}gimen asint\'{o}tico, \(R_g\) es proporcional linealmente al radio total del c\'{u}mulo, ii) las correcciones debido a efectos de borde se pueden ignorar y iii) la estructura no es un multifractal geom\'{e}trico \cite{Mroczka2012, Vicsek1992}.
 
 \subsection{Multifractalidad}
 
-Las medidas multifactales o fractales están relacionadas con el estudio de una distribución de cantidades físicas o de otro tipo en un soporte geométrico. El soporte puede ser un plano ordinario, la superficie de un volumen, o podría ser en sí mismo un fractal. En general, un multifractal posee un número infinito de singularidades de infinitos tipos. La multifractalidad expressa el hecho de que los puntos correspondientes a un tipo determinado de singularidad suelen formar un subconjunto fractal cuya dimensión depende del tipo de singularidad. La idea de que un multifractal puede ser representado en términos de subconjuntos fractales entrelaizados que tienen diferentes exponentes de escala.
+Las medidas multifactales o fractales est\'{a}n relacionadas con el estudio de una distribuci\'{o}n de cantidades f\'{i}sicas o de otro tipo en un soporte geom\'{e}trico. El soporte puede ser un plano ordinario, la superficie de un volumen, o podr\'{i}a ser en s\'{i} mismo un fractal. En general, un multifractal posee un n\'{u}mero infinito de singularidades de infinitos tipos. La multifractalidad expresa el hecho de que los puntos correspondientes a un tipo determinado de singularidad suelen formar un subconjunto fractal cuya dimensi\'{o}n depende del tipo de singularidad. La idea de que un multifractal puede ser representado en t\'{e}rminos de subconjuntos fractales entrelazados que tienen diferentes exponentes de escala.
 
-\subsection{Evaluación de datos numéricos}
+\subsection{Geometr\'{i}a fractal en prote\'{i}nas}
 
-Cuando se investigan propiedades multifractales, la función del sitio toma valores arbitrarios. En general, dichos conjuntos discretos de números se obtienen por dos métodos principales: i) digitalizando imágenes tomadas de objetos producidos en experimentos, ii) por procedimientos numéricos utilizados para simular diversos fenómenos de crecimiento. En el caso de crecimiento aleatorio, los datos generados numéricamente suelen producirse mediante variaciones del método de Monte Carlo. Hay muchas formas de determinar la dimensión fractal D a partir de datos numéricos. A continuación, discutiremos cómo medir D para un solo objeto. Para hacer las estimaciones más precisas, generalmente se calcula la dimensión fractal para muchos grupos y se promedia sobre los resultados. Quizás el método más simple es usar la definición de  D como se indica en (2.2) y (2.3). En nuestro caso, la unidad de longitud corresponde a la constante de la red, y el número de esferas de volumen unitario es válido solo si hay una equivalencia entre el escalamiento observado al cubrir la estructura con una red de cajas (conteo de cajas) y el uso de cajas de tamaño creciente centradas en el mismo punto (método de caja de arena). Esta equivalencia solo existe para fractales uniformes sin un espectro multifractal de su distribución de "masa" (ver Sección 3.4).) Por lo tanto, la dimensión fractal se puede obtener ajustando una línea recta a la parte asintótica de los datos de  N(R), por ejemplo, usando el método de mínimos cuadrados.
+Ahora que hemos definido D y explicado algunos m\'{e}todos para obtenerlo, surge naturalmente la pregunta de si el conocimiento de la magnitud de la dimensi\'{o}n tiene alguna utilidad. Las respuestas provienen de varios experimentos en los que se ha empleado para cuantificar algunos aspectos de la morfolog\'{i}a proteica. Dado que la estructura de las prote\'{i}nas tiene una forma tan compleja que solo se puede analizar adecuadamente mediante el enfoque de la geometr\'{i}a fractal \cite{Mustafa1996}. 
 
-Una variación del método anterior se usa generalmente si se registra el número total de partículas dentro de un grupo durante el crecimiento. Esta situación es común, por ejemplo, en simulaciones Monte Carlo, donde la estructura normalmente crece mediante la adición sucesiva de partículas al objeto. En este enfoque, primero se calcula el radio de giro.
+Una prote\'{i}na consiste en una cadena de polip\'{e}ptidos compuesta por residuos de amino\'{a}cidos unidos entre s\'{i} por enlaces pept\'{i}dicos. La cadena polipept\'{i}dica o columna vertebral forma un pol\'{i}mero lineal compuesto por unidades repetitivas que son id\'{e}nticas, excepto por los terminales de la cadena \cite{Mustafa1996}.
 
-\subsection{Usos de la geometría fractal y D}
-
-Ahora que hemos definido D y explicado los métodos para obtenerlo, surge naturalmente la pregunta de si el conocimiento de la magnitud de la dimensión tiene alguna utilidad. Las respuestas provienen de varios experimentos en los que se ha empleado para cuantificar algunos aspectos de la morfología protéica. Dado que la estructura de las proteínas tiene una forma tan compleja que solo se puede analizar adecuadamente mediante el enfoque de la geometría fractal. 
-
-Una proteína consiste en una cadena de polipéptidos compuesta por residuos de aminoácidos unidos entre sí por enlaces peptídicos. La cadena polipeptídica o columna vertebral forma un polímero lineal compuesto por unidades repetitivas que son idénticas, excepto por los terminales de la cadena. Es así que las proteínas tienen aspectos fractales. Hay pocos enlaces cruzados covalentes (disulfuro), pero la cadena nunca está ramificada. Los tipos de proteínas son decididos por los aminoácidos de la cadena polipeptídica. Hay 20 aminoácidos comunes que difieren en sus cadenas laterales, formando una serie de tipos de proteínas, desde la glicina más simple hasta el triptófano más complejo. El análisis fractal de la conformación de la cadena de proteínas puede ser importante para el estudio de las características de las proteínas.
-
-La estructura primaria de un proteina se conoce como la secuencia de ácidos amínicos y determina la conformación nativa. Los elementos de la estructura secundaria son las láminas a-helices y B-plisadas, mientras que la estructura terciaria se relaciona con las disposiciones espaciales generales de los residuos de aminoácidos en las proteínas. En general, las proteínas son sistemas apretados, ¿y hay un número relativamente pequeño de vacíos? Por lo tanto, la dimensión fractal se puede utilizar para caracterizar las estructuras terciarias de proteínas y enzimas.
-
-Para las proteínas, otras propiedades como la densidad de las frecuencias vibratorias, el comportamiento caótico, la geometría de la superficie y la cinética, etc., parecen obedecer a las leyes de escala en algunos casos limitantes. También se pueden describir mediante diferentes modelos fractales y diferentes tipos de dimensiones fractales. Por lo tanto, es necesario introducir algunos temas especiales de la teoría fractal, como el fractal de grasa, el multifractal, la dimensión fractal, etc.
-
-Muchos trabajos pioneros han demostrado una y otra vez que la proteína que tiene autosimilitud estadística puede ser manejada por el enfoque fractal. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de proteínas es cierta en lo común solo en un sentido estadístico, es decir, la parte no siempre se verá exactamente como el todo. Otra diferencia entre las macromoléculas biológicas y los objetos ideales es que una fractal no es autosimilar en todas las escalas de longitud. Hay límites de tamaño superior e inferior más allá de los cuales una macromolécula ya no es fractal. La investigación fractal sobre enzimas y proteínas es actualmente un campo activo. En el análisis fractal de proteínas, a menudo se busca una ley de poder de la forma p - v°, donde p es una propiedad; v, la variable, y a, el exponente, pueden estar relacionados con el fractal.
+La estructura primaria de un proteina se conoce como la secuencia de \'{a}cidos am\'{i}nicos y determina la conformaci\'{o}n nativa. Los elementos de la estructura secundaria son las l\'{a}minas a-helices y B-plisadas, mientras que la estructura terciaria se relaciona con las disposiciones espaciales generales de los residuos de amino\'{a}cidos en las prote\'{i}nas. Por lo tanto, la dimensi\'{o}n fractal se puede utilizar para caracterizar las estructuras terciarias de prote\'{i}nas y enzimas. Tambi\'{e}n se pueden describir mediante diferentes modelos fractales y diferentes tipos de dimensiones fractales. Muchos trabajos pioneros han demostrado una y otra vez que la prote\'{i}na que tiene autosimilitud estad\'{i}stica y puede ser manejada por el enfoque fractal. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de prote\'{i}nas es cierta en lo com\'{u}n solo en un sentido estad\'{i}stico, es decir, la parte no siempre se ver\'{a} exactamente como el todo. Otra diferencia entre las macromol\'{e}culas biol\'{o}gicas y los objetos ideales es que una fractal no es autosimilar en todas las escalas de longitud. Hay l\'{i}mites de tamaño superior e inferior m\'{a}s all\'{a} de los cuales una macromol\'{e}cula ya no es fractal. Por lo que la investigaci\'{o}n fractal sobre enzimas y prote\'{i}nas es actualmente un campo activo \cite{Mustafa1996}. 
 
 
-\subsection{Root Mean Square y Tubulinopatías}
 
+\subsection{Medidas basadas en distancia de la similitud estructural de prote\'{i}nas: RMSD}
 
-\begin{comment}
-Las tubulinopatías son un grupo de enfermedades genéticas raras que afectan la función de las tubulinas, que son proteínas estructurales importantes en el citoesqueleto celular. El citoesqueleto es una red de proteínas que proporciona estructura y forma a las células y participa en varios procesos celulares, como la división celular, el transporte intracelular y la migración celular.
+A pesar de su aparente simplicidad, el problema de cuantificar las diferencias entre dos estructuras de la misma proteína o complejo no es trivial y continúa evolucionando \cite{Kufareva2012}. La Desviaci\'{o}n Cuadr\'{a}tica Media (RMSD) es la medida cuantitativa m\'{a}s com\'{u}nmente usada para la similitud entre dos conjuntos de coordenadas at\'{o}micas superpuestas. Los valores de RMSD se presentan en Ångströms y se calculan mediante:
 
-Las tubulinas son las proteínas principales que componen los microtúbulos, estructuras cilíndricas huecas que forman parte del citoesqueleto y desempeñan un papel crucial en la división celular, el transporte intracelular de vesículas y orgánulos, y la estabilidad celular.
+\begin{equation}
+RMSD = \sqrt{\frac{1}{n} \sum_{i=1}^{n} d_i^2}
+\end{equation}
 
-Las tubulinopatías pueden ser causadas por mutaciones genéticas que afectan a los genes que codifican las tubulinas o las proteínas asociadas con los microtúbulos. Estas mutaciones pueden interferir con la función normal de las tubulinas y los microtúbulos, lo que resulta en una amplia variedad de manifestaciones clínicas.
+donde el promedio se realiza sobre los \(n\) pares de \'{a}tomos equivalentes y \(d_i\) es la distancia entre los dos \'{a}tomos del par \(i\). 
 
-Las características clínicas de las tubulinopatías pueden incluir anomalías del desarrollo del sistema nervioso central, como malformaciones cerebrales, trastornos del desarrollo cognitivo y del habla, retraso en el desarrollo motor, epilepsia y trastornos del movimiento. También pueden afectar otros sistemas del cuerpo, como el sistema ocular y el sistema hematológico.
+El RMSD se puede calcular para cualquier tipo y subconjunto de \'{a}tomos; por ejemplo, para los \'{a}tomos \(C_{\alpha}\) de toda la prote\'{i}na, para los \'{a}tomos \(C_{\alpha}\) de todos los residuos en un subconjunto espec\'{i}fico (como las h\'{e}lices transmembrana, el sitio de uni\'{o}n o un bucle), todos los \'{a}tomos pesados de un subconjunto espec\'{i}fico de residuos, o todos los \'{a}tomos pesados en un ligando de mol\'{e}cula pequeña. La principal desventaja del RMSD es que est\'{a} dominado por las amplitudes de errores. Dos estructuras que son id\'{e}nticas excepto por la posici\'{o}n de un solo bucle o un extremo flexible generalmente tienen un RMSD global del esqueleto grande y no se pueden superponer eficazmente mediante ning\'{u}n algoritmo que optimice el RMSD global.Una extensi\'{o}n importante de la medida RMSD, es el RMSD ponderado (wRMSD), permite centrarse en subconjuntos at\'{o}micos seleccionados, por ejemplo, minimizando la importancia de las regiones conocidas por ser inherentemente no estructuradas \cite{Kufareva2012}.
 
-Algunos ejemplos de tubulinopatías incluyen el síndrome de lissencefalia tipo 2 (también conocido como síndrome de Miller-Dieker), el síndrome de pachygyria liso, y la displasia cortical focal.
-
-Dado que las tubulinopatías son enfermedades raras, la investigación en este campo está en curso para comprender mejor su patogénesis, sus manifestaciones clínicas y para desarrollar enfoques terapéuticos dirigidos.
-\end{comment}
+\begin{equation}
+RMSD = \sqrt{\frac{\sum_{i=1}^{n} w_{i}d_{i}^{2}}{\sum_{i=1}^{n} w_{i}}}
+\end{equation}
 
 \clearpage
 
+\subsection{Enfermedades gen\'{e}ticas}
+
+Las tubulinas son las prote\'{i}nas principales que componen los microt\'{u}bulos (estructuras cil\'{i}ndricas huecas que forman parte del citoesqueleto y desempeñan un papel crucial en la divisi\'{o}n celular, el transporte intracelular de ves\'{i}culas y org\'{a}nulos, y la estabilidad celular).
+Las tubulinopat\'{i}as son un grupo de enfermedades gen\'{e}ticas raras que afectan la funci\'{o}n de las tubulinas. Las tubulinopat\'{i}as pueden ser causadas por mutaciones gen\'{e}ticas que afectan a los genes que codifican las tubulinas o las prote\'{i}nas asociadas con los microt\'{u}bulos. Estas mutaciones pueden interferir con la funci\'{o}n normal de las tubulinas y los microt\'{u}bulos, lo que resulta en una amplia variedad de manifestaciones cl\'{i}nicas. Las caracter\'{i}sticas cl\'{i}nicas de las tubulinopat\'{i}as pueden incluir anomal\'{i}as del desarrollo del sistema nervioso central, como malformaciones cerebrales, trastornos del desarrollo cognitivo y del habla, retraso en el desarrollo motor, epilepsia y trastornos del movimiento. Tambi\'{e}n pueden afectar otros sistemas del cuerpo, como el sistema ocular y el sistema hematol\'{o}gico. Algunos ejemplos de tubulinopat\'{i}as incluyen el s\'{i}ndrome de lissencefalia tipo 2 (tambi\'{e}n conocido como s\'{i}ndrome de Miller-Dieker), el s\'{i}ndrome de pachygyria liso, y la displasia cortical focal. Dado que las tubulinopat\'{i}as son enfermedades raras, la investigaci\'{o}n en este campo est\'{a} en curso para comprender mejor su patog\'{e}nesis, sus manifestaciones cl\'{i}nicas y para desarrollar enfoques terap\'{e}uticos dirigidos.
+
 \section{Objetivos}
 \subsection{Objetivo general}
-Determinar si la dimesion fractal de masa sirve para identifcar los posibles cambios en los patrones de agregaciones de las proteinas y verificar si esos patrones se modifican en las proteinas.
+
+Determinar si las prote\'{i}nas presentan caracter\'{i}sticas multifractales. De ser as\'{i}, analizar y caracterizar
+dicha multifractalidad con el fin de utilizar una o m\'{a}s variantes de la
+dimensi\'{o}n fractal como medida(s) caracterizadora(s)
+de la estructura y patrones de agregaci\'{o}n de las prote\'{i}nas.
 
 
-Determinar(cambiar por sinonimo) la dimesión fractal de masa puede resolver entre dos proteínas diferentes.
 \subsection{Objetivos particulares}
 
 \begin{itemize}
 
-\item Analizar la dimesion fractal de masa y el radio de giro de un conjunto de proteínas partiendo de la definicion de multifractalidad usando datos experimentales.
+\item Seleccionar un conjunto de prote\'{i}nas de estudio que tengan potencial para aplicaciones posteriores.
+Por ejemplo prote\'{i}nas nativas/mutadas, prote\'{i}nas que han mantenido su funci\'{o}n biol\'{o}gica pero que se
+han diferenciado estructuralmente, entre otros casos. Se priorizar\'{a}n casos en que se cuente con informaci\'{o}n
+experimental (PDB).
 
+\item Adaptar la determinaci\'{o}n de la dimensi\'{o}n fractal de masa a las prote\'{i}nas, a partir de otros casos como geles o materiales ferromagn\'{e}ticos.
 
-\item Enteneder si existe una diferencia entre proteínas mutadas de las sanas.
+\item Analizar la dimension fractal de masa de un conjunto de prote\'{i}nas, partiendo de la definici\'{o}n de multifractalidad y usando los datos experimentales recabados.
 
-\item Determinar si alguna region de una proteína con una mayor o menor dimensión fractal está asociada con sitios de interacción con otras proteínas o con mutaciones relacionadas, con el obejtivo de identificar regiones específicas de una proteína que exhiba una complejidad estructural alterada en pacientes con  alguna enfermedad, 
+\item Analizar si la multifractalidad de una prote\'{i}na se observa con otras formas de determinar la
+dimensi\'{o}n fractal de masa, por ejemplo el radio de giro.
 
-\item Desarrollar modelos predictivos que evaluen cómo las mutaciones  afectan la estructura tridimensional y la función de alguna proteína  para saber si existen implicaciones importantes para la predicción del riesgo de desarrollar alguna enfermedad.
+\item Explorar el uso potencial de la dimensi\'{o}n fractal de masa como una herramienta para identificar
+o resolver entre prote\'{i}nas gen\'{e}ticamente similares pero con diferencias estructurales notables.
 
 \end{itemize}
 
 \clearpage
 
-\section{Metodología}
+\section{Metodolog\'{i}a}
 
 \begin{enumerate}
 	
-\item Obtención de la estructura tridimensional de la proteína: Obtener la estructura tridimensional de la proteínas que fue determinda mediante técnicas experimentales como la cristalografía de rayos X o la espectroscopia de resonancia magnética nuclear, o mediante técnicas computacionales de modelado molecular como la predicción de estructuras por homología.
+\item Obtenci\'{o}n de la estructura tridimensional de la prote\'{i}na: Obtener la estructura tridimensional de la prote\'{i}nas que fue determinda mediante t\'{e}cnicas experimentales como la cristalograf\'{i}a de rayos X o la espectroscopia de resonancia magn\'{e}tica nuclear.
 
-\begin{comment}
-\item Generación de un modelo tridimensional del fractal de la proteína: Una vez que obtenida la estructura tridimensional de la proteína, se  usarán métodos computacionales para generar un modelo tridimensional del fractal de la proteína. 
-\end{comment}
+\item C\'{a}lculo de la dimensi\'{o}n fractal de masa: El c\'{a}lculo de la dimensi\'{o}n fractal de masa implica medir c\'{o}mo var\'{i}a el volumen del objeto (en este caso, la prote\'{i}na) con respecto a la escala a la que se est\'{a} observando. Esto se puede hacer utilizando algoritmos espec\'{i}ficos para el c\'{a}lculo de la dimensi\'{o}n fractal de masa como el algoritmo box-counting.
 
-\item Cálculo de la dimensión fractal de masa: El cálculo de la dimensión fractal de masa implica medir cómo varía el volumen del objeto (en este caso, la proteína) con respecto a la escala a la que se está observando. Esto se puede hacer utilizando algoritmos específicos para el cálculo de la dimensión fractal de masa como el algoritmo box-counting.
-
-\item Análisis de la complejidad geométrica de la proteína: Una vez calculada la dimensión fractal de masa para la proteína: se analizará cómo varía esta dimensión en diferentes regiones de la proteína y en diferentes escalas. Esto nos permitirá caracterizar la complejidad geométrica de la proteína a diferentes niveles de detalle.
-
-\begin{comment}
-\item Correlación con la función y la patología: Finalmente, se correlacionará los resultados del análisis de la dimensión fractal de masa con la función biológica de la proteína y su implicación en las tubulinopatías.  Es decir, se buscará si las regiones de la proteína con una mayor dimensión fractal de masa están asociadas con sitios de interacción con otras proteínas o con sitios de mutaciones relacionadas con las tubulinopatías.
-
-No prometer está información que no se sabe si funcionará
-\end{comment}
-
-
-También puedo poner las imaganes del Dr Carrillo, solo especificar que es para geles. 
+\item An\'{a}lisis de la complejidad geom\'{e}trica de la prote\'{i}na: Una vez calculada la dimensi\'{o}n fractal de masa para la prote\'{i}na, se analizar\'{a} c\'{o}mo var\'{i}a esta dimensi\'{o}n en diferentes escalas. Esto nos permitir\'{i}a caracterizar la complejidad geom\'{e}trica de la prote\'{i}na a diferentes niveles de detalle.
 
 \end{enumerate}
 
@@ -268,20 +277,18 @@ Materias del primer semestre & X & X & X & X & X & & & & & & &  \\
 \hline
 LII Winter Meeting on Statistical Physics & & & & & & X & & & & & & \\
 \hline
-Curso de Química Cuántica en Átomos & & & & & & X & X & X & X & X & X & \\
+Curso de Qu\'{i}mica Cu\'{a}ntica en \'{a}tomos & & & & & & X & X & X & X & X & X & \\
 \hline
 Materias del segundo semestre &  &  &  &  &  & X & X & X & X & X & X &\\
 \hline
-Revisi\'on bibliogr\'afica & X & X & X & X & X & X & X & X & X & X & X & X \\
+Revisi\'{o}n bibliogr\'{a}fica & X & X & X & X & X & X & X & X & X & X & X & X \\
 \hline
-Presentación del protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
+Presentaci\'{o}n del protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
 \hline
-Preparación de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
+Preparaci\'{o}n de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
 \hline
 & \multicolumn{5}{c|}{2024} & \multicolumn{7}{c||}{2025}\\\hline
 & Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
-\hline
-Curso de Termodinámica Estadística & X & X & X & X & X &  &  &  &  &  &  &\\
 \hline
 XXII RMFQT &  &  &  & X &  &  &  &  &  &  &  &\\
 \hline
@@ -289,11 +296,11 @@ XXlX Simposio interno FCQ - ICUAP &  &  &  & X &  &  &  &  &  &  &  &\\
 \hline
 LIII Winter Meeting on Statistical Physics &  &  &  &  &  & X &  &  &  &  &  &\\
 \hline
-Revisi\'on bibliogr\'afica & X & X & X & X & X & X & X & X & X & X & X &\\
+Revisi\'{o}n bibliogr\'{a}fica & X & X & X & X & X & X & X & X & X & X & X &\\
 \hline
-Redacci\'on de tesis &  &  &  &  &  & X & X & X & X &  &  &\\
+Redacci\'{o}n de tesis &  &  &  &  &  & X & X & X & X &  &  &\\
 \hline
-Revisi\'on de tesis &  &  &  &  &  &  &  &  & X & X & X & \\
+Revisi\'{o}n de tesis &  &  &  &  &  &  &  &  & X & X & X & \\
 \hline
 Examen &  &  &  &  &  &  &  &  &  &  &  & X\\
 \hline
