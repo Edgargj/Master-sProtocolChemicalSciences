@@ -1,97 +1,59 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Protocolo Laboratorio de Fisicoqu\'{i}mica Te\'{o}rica 
-% LaTeX Template
-% Version 0.1 (10/12/17)
-%
-% Part of this template was downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Edgar Garc\'{i}a Juarez (b613) edgargj.16@gmail.com
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%-----------------------------------------------------------------------------% 
-% Packages
-%-----------------------------------------------------------------------------%
-\documentclass[11pt]{article} 	
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{latexsym,amssymb,amsfonts}
-\usepackage[usenames]{color}
-\usepackage{float}
+\documentclass[11pt]{article}
 \usepackage{graphicx}
-\usepackage{verbatim}
-
-\usepackage{amsmath,mathtools}
-\usepackage[font={small},format=plain,labelfont=bf]{caption} % Size and format of foot of figures and tables
-\usepackage{color}
+\usepackage[spanish]{babel}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage{textpos}
 \usepackage{hyperref}
-%-----------------------------------------------------------------------------%
-% Margin settings 
-%-----------------------------------------------------------------------------%
-\usepackage{geometry}
-\geometry{
-	paper=letterpaper, % Paper type
-	inner=2.5cm, % Inner margin
-	outer=2.5cm, % Outer margin
-	top=3.5cm, % Top margin
-	bottom=3.5cm, % Bottom margin
-}
-%-----------------------------------------------------------------------------% 
-% New Commands
-%-----------------------------------------------------------------------------%
-\renewcommand{\tablename}{Tabla} % Name of table foot 
-\renewcommand{\baselinestretch}{1.5} % space between lines 1.5
-\newcommand\tab[1][0.5cm]{\hspace*{#1}}
-\newcommand\vtab[1][0.5cm]{\vspace*{#1}}
-%-----------------------------------------------------------------------------% 
-%-----------------------------------------------------------------------------%
-% Document
-%-----------------------------------------------------------------------------%
-%-----------------------------------------------------------------------------% 
+\usepackage{comment}
+
 
 \begin{document}
+\begin{titlepage}
+
+\begin{textblock}{3}(0,11.5)
+   \begin{tabular}{ccc}
+      Puebla, Pue. & \phantom{MMMMMMMMMMMMMMMMM} & Mayo de 2024\phantom{MMMMMM}
+   \end{tabular}
+\end{textblock}
+
+\centering
+\phantom{M}
+
+\vspace{-20mm}
+{\includegraphics[width=4cm]{buap} \par}
+\vspace{5mm}
+{\bfseries\huge Benemérita Universidad Autónoma de Puebla \par}
+\vspace{10mm}
+{\Large Facultad de Ciencias Químicas\par}
+{\Large Centro de Química-Instituto de Ciencias \par}
+\vspace{5mm}
+{\Large Posgrado en Ciencias Químicas\par}
+\vspace{15mm}
+{\scshape\large \textbf{``La dimensi\'{o}n fractal de masa como medida caracterizadora\\de la estructura de las prote\'{i}nas''} \par}
+\vspace{15mm}
+{\large Protocolo de Tesis de Maestría\par}
+\vspace{5mm}
+{\Large Lic. en Qu\'{i}mica \par}
+{\Large Edgar Garc\'{i}a Ju\'{a}rez \par}
+\vspace{20mm}
+
+
+\begin{tabular}{p{0.45\textwidth}cp{0.45\textwidth}}
+  \cline{1-1} \cline{3-3} \\
+  \centering Director de tesis \\ Dr. J. Manuel Solano Altamirano & & \centering Co-Directora de tesis\\ Dra. Viridiana Vargas Castro 
+\end{tabular}
+
+\end{titlepage}
+
 %-----------------------------------------------------------------------------%
 % Cover Page
 %-----------------------------------------------------------------------------% 
-\pagestyle{empty} 
-\phantom{a}
-\vspace{-1.4cm}
-\begin{center}
-\includegraphics[width=4cm]{buap.pdf}
-%\includegraphics[width=4cm]{fcq.pdf}
-
-\Large{\textbf{Benem\'{e}rita Universidad Aut\'{o}noma de Puebla}\\
-\rule{150mm}{0.1mm}\\
-Facultad de Ciencias Qu\'{i}micas\\
-Centro de Qu\'{i}mica - Instituto de Ciencias\\
-Posgrado en Ciencias Qu\'{i}micas}\\
-\rule{150mm}{0.1mm}
-
-\vtab[.1cm]
-{\scshape\large \textbf{La dimensi\'{o}n fractal de masa como medida caracterizadora\\de la estructura de las prote\'{i}nas}}\\
-\vtab[.1cm]
-\Large{Protocolo de tesis de Maestr\'{i}a}\\
-\vtab[0.2cm]
-
-Lic. en Qu\'{i}mica \\
-Edgar Garc\'{i}a Ju\'{a}rez \\
-\vtab[0.5cm]
-\begin{tabular}{cc}
-\vtab[10mm]
-Director de tesis & Co-directora de tesis \\
-\rule{50mm}{0.1mm} & \rule{50mm}{0.1mm} \\
-Dr. J. M. Solano Altamirano & Dra. Viridiana Vargas Castro \\ 
-FCQ - BUAP & FCQ - BUAP \\ 
-\end{tabular} 
-\vtab[1cm] \\
-{\today}
-\end{center}
-
 \clearpage
 
 \section{Introducci\'{o}n}
 
-A pesar de su aparente simplicidad, el problema de cuantificar las diferencias entre dos estruc-
-turas de la misma prote\'{i}na no es trivial y continúa evolucionando. Debido a que el aspecto y distribuci\'{o}n de las prote\'{i}nas es aparentemente desordenado, la dimensi\'{o}n fractal  puede sintetizar toda la informaci\'{o}n que contienen estos sistemas. 
+A pesar de su aparente simplicidad, el problema de cuantificar las diferencias entre dos estructuras de la misma prote\'{i}na no es trivial y continúa evolucionando. Debido a que el aspecto y distribuci\'{o}n de las prote\'{i}nas es aparentemente desordenado, la dimensi\'{o}n fractal  puede sintetizar toda la informaci\'{o}n que contienen estos sistemas. 
 
 
 
@@ -121,15 +83,18 @@ La determinacion de la dimensi\'{o}n fractal de estructuras en crecimiento, norm
 
 
 \begin{enumerate}
-\item Digitalizando im\'{a}genes tomadas de objetos producidos en experimentos.
-\item Usando procedimientos num\'{e}ricos utilizados para simular diversos fen\'{o}menos de crecimiento.
+\item Digitalizando im\'{a}genes.
+\item Procedimientos num\'{e}ricos.
 \end{enumerate}
  
   En el segundo caso, los datos generados num\'{e}ricamente suelen producirse mediante variaciones del m\'{e}todo de Monte Carlo. A continuaci\'{o}n, discutiremos c\'{o}mo medir D para un solo objeto. Para hacer las estimaciones m\'{a}s precisas, generalmente se calcula la dimensi\'{o}n fractal para muchos grupos y se promedia sobre los resultados. Quiz\'{a}s, el m\'{e}todo m\'{a}s simple es usar la definici\'{o}n de  D como se indica en \ref{subsec:subseccion2.1}. Por lo tanto, la dimensi\'{o}n fractal se puede obtener ajustando una l\'{i}nea recta a la parte asint\'{o}tica de los datos de  N(R), por ejemplo, usando el m\'{e}todo de m\'{i}nimos cuadrados \cite{Vicsek1992}.
-
+  
+  
+\begin{comment}
 \subsection{M\'{e}todo de conteo de cajas}
 
 Este m\'{e}todo consiste en dividir el espacio que contiene un patr\'{o}n dado en celdas o p\'{i}xeles de longitud (E), despu\'{e}s se cuenta el n\'{u}mero de celdas o p\'{i}xeles que existen \(N(E)\). El n\'{u}mero \(N(E)\) se mide variando el valor de \(E\) y traz\'{a}ndolo en escala logar\'{i}tmica frente a \(E\), esta es una forma pr\'{a}ctica de comprobar la autosimilitud de un patr\'{o}n determinado. Si los puntos se ajustan a una l\'{i}nea recta, se puede concluir que el patr\'{o}n dado es autosimilar, y la dimensi\'{o}n fractal \(D\) se obtiene del valor de la pendiente de la l\'{i}nea \cite{Mustafa1996}. 
+\end{comment}
 
 \subsection{Relaci\'{o}n entre Masa y radio}
 
@@ -203,23 +168,20 @@ RMSD = \sqrt{\frac{1}{n} \sum_{i=1}^{n} d_i^2}
 
 donde el promedio se realiza sobre los \(n\) pares de \'{a}tomos equivalentes y \(d_i\) es la distancia entre los dos \'{a}tomos del par \(i\). 
 
-El RMSD se puede calcular para cualquier tipo y subconjunto de \'{a}tomos; por ejemplo, para los \'{a}tomos \(C_{\alpha}\) de toda la prote\'{i}na, para los \'{a}tomos \(C_{\alpha}\) de todos los residuos en un subconjunto espec\'{i}fico (como las h\'{e}lices transmembrana, el sitio de uni\'{o}n o un bucle), todos los \'{a}tomos pesados de un subconjunto espec\'{i}fico de residuos, o todos los \'{a}tomos pesados en un ligando de mol\'{e}cula pequeña. La principal desventaja del RMSD es que est\'{a} dominado por las amplitudes de errores. Dos estructuras que son id\'{e}nticas excepto por la posici\'{o}n de un solo bucle o un extremo flexible generalmente tienen un RMSD global del esqueleto grande y no se pueden superponer eficazmente mediante ning\'{u}n algoritmo que optimice el RMSD global.Una extensi\'{o}n importante de la medida RMSD, es el RMSD ponderado (wRMSD), permite centrarse en subconjuntos at\'{o}micos seleccionados, por ejemplo, minimizando la importancia de las regiones conocidas por ser inherentemente no estructuradas \cite{Kufareva2012}.
-
-\begin{equation}
-RMSD = \sqrt{\frac{\sum_{i=1}^{n} w_{i}d_{i}^{2}}{\sum_{i=1}^{n} w_{i}}}
-\end{equation}
-
+El RMSD se puede calcular para cualquier tipo y subconjunto de \'{a}tomos; por ejemplo, para los \'{a}tomos \(C_{\alpha}\) de toda la prote\'{i}na, para los \'{a}tomos \(C_{\alpha}\) de todos los residuos en un subconjunto espec\'{i}fico (como las h\'{e}lices transmembrana, el sitio de uni\'{o}n o un bucle), todos los \'{a}tomos pesados de un subconjunto espec\'{i}fico de residuos, o todos los \'{a}tomos pesados en un ligando de mol\'{e}cula pequeña. La principal desventaja del RMSD es que est\'{a} dominado por las amplitudes de errores. Dos estructuras que son id\'{e}nticas excepto por la posici\'{o}n de un solo bucle o un extremo flexible generalmente tienen un RMSD global del esqueleto grande y no se pueden superponer eficazmente mediante ning\'{u}n algoritmo que optimice el RMSD global.
 \clearpage
 
+\begin{comment}
 \subsection{Enfermedades gen\'{e}ticas}
 
 Las tubulinas son las prote\'{i}nas principales que componen los microt\'{u}bulos (estructuras cil\'{i}ndricas huecas que forman parte del citoesqueleto y desempeñan un papel crucial en la divisi\'{o}n celular, el transporte intracelular de ves\'{i}culas y org\'{a}nulos, y la estabilidad celular).
 Las tubulinopat\'{i}as son un grupo de enfermedades gen\'{e}ticas raras que afectan la funci\'{o}n de las tubulinas. Las tubulinopat\'{i}as pueden ser causadas por mutaciones gen\'{e}ticas que afectan a los genes que codifican las tubulinas o las prote\'{i}nas asociadas con los microt\'{u}bulos. Estas mutaciones pueden interferir con la funci\'{o}n normal de las tubulinas y los microt\'{u}bulos, lo que resulta en una amplia variedad de manifestaciones cl\'{i}nicas. Las caracter\'{i}sticas cl\'{i}nicas de las tubulinopat\'{i}as pueden incluir anomal\'{i}as del desarrollo del sistema nervioso central, como malformaciones cerebrales, trastornos del desarrollo cognitivo y del habla, retraso en el desarrollo motor, epilepsia y trastornos del movimiento. Tambi\'{e}n pueden afectar otros sistemas del cuerpo, como el sistema ocular y el sistema hematol\'{o}gico. Algunos ejemplos de tubulinopat\'{i}as incluyen el s\'{i}ndrome de lissencefalia tipo 2 (tambi\'{e}n conocido como s\'{i}ndrome de Miller-Dieker), el s\'{i}ndrome de pachygyria liso, y la displasia cortical focal. Dado que las tubulinopat\'{i}as son enfermedades raras, la investigaci\'{o}n en este campo est\'{a} en curso para comprender mejor su patog\'{e}nesis, sus manifestaciones cl\'{i}nicas y para desarrollar enfoques terap\'{e}uticos dirigidos.
+\end{comment}
 
 \section{Objetivos}
 \subsection{Objetivo general}
 
-Determinar si las prote\'{i}nas presentan caracter\'{i}sticas multifractales. De ser as\'{i}, analizar y caracterizar
+Determinar si las prote\'{i}nas presentan caracter\'{i}sticas multifractales. De ser as\'{i}, analizar
 dicha multifractalidad con el fin de utilizar una o m\'{a}s variantes de la
 dimensi\'{o}n fractal como medida(s) caracterizadora(s)
 de la estructura y patrones de agregaci\'{o}n de las prote\'{i}nas.
@@ -230,8 +192,8 @@ de la estructura y patrones de agregaci\'{o}n de las prote\'{i}nas.
 \begin{itemize}
 
 \item Seleccionar un conjunto de prote\'{i}nas de estudio que tengan potencial para aplicaciones posteriores.
-Por ejemplo prote\'{i}nas nativas/mutadas, prote\'{i}nas que han mantenido su funci\'{o}n biol\'{o}gica pero que se
-han diferenciado estructuralmente, entre otros casos. Se priorizar\'{a}n casos en que se cuente con informaci\'{o}n
+Por ejemplo prote\'{i}nas nativas y mutadas, prote\'{i}nas que han mantenido su funci\'{o}n biol\'{o}gica pero que se
+han diferenciado estructuralmente, entre otros casos. Se priorizar\'{a}n los casos en que se cuente con informaci\'{o}n
 experimental (PDB).
 
 \item Adaptar la determinaci\'{o}n de la dimensi\'{o}n fractal de masa a las prote\'{i}nas, a partir de otros casos como geles o materiales ferromagn\'{e}ticos.
@@ -283,7 +245,7 @@ Materias del segundo semestre &  &  &  &  &  & X & X & X & X & X & X &\\
 \hline
 Revisi\'{o}n bibliogr\'{a}fica & X & X & X & X & X & X & X & X & X & X & X & X \\
 \hline
-Presentaci\'{o}n del protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
+Presentaci\'{o}n de protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
 \hline
 Preparaci\'{o}n de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
 \hline
