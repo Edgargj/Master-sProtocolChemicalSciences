@@ -23,16 +23,16 @@
 \vspace{-20mm}
 {\includegraphics[width=4cm]{buap} \par}
 \vspace{5mm}
-{\bfseries\huge Benemérita Universidad Autónoma de Puebla \par}
+{\bfseries\huge Benem\'{e}rita Universidad Aut\'{o}noma de Puebla \par}
 \vspace{10mm}
-{\Large Facultad de Ciencias Químicas\par}
-{\Large Centro de Química-Instituto de Ciencias \par}
+{\Large Facultad de Ciencias Qu\'{i}micas\par}
+{\Large Centro de Qu\'{i}mica-Instituto de Ciencias \par}
 \vspace{5mm}
-{\Large Posgrado en Ciencias Químicas\par}
+{\Large Posgrado en Ciencias Qu\'{i}micas\par}
 \vspace{15mm}
-{\scshape\large \textbf{``La dimensi\'{o}n fractal de masa como medida caracterizadora\\de la estructura de las prote\'{i}nas''} \par}
+{\textbf{``La dimensi\'{o}n fractal de masa como medida caracterizadora\\de la estructura de las prote\'{i}nas''} \par}
 \vspace{15mm}
-{\large Protocolo de Tesis de Maestría\par}
+{\large Protocolo de Tesis de Maestr\'{i}a\par}
 \vspace{5mm}
 {\Large Lic. en Qu\'{i}mica \par}
 {\Large Edgar Garc\'{i}a Ju\'{a}rez \par}
@@ -42,7 +42,7 @@
 \begin{tabular}{p{0.45\textwidth}cp{0.45\textwidth}}
   \cline{1-1} \cline{3-3} \\
   \centering Director de tesis \\ Dr. J. Manuel Solano Altamirano & & \centering Co-Directora de tesis\\ Dra. Viridiana Vargas Castro 
-\end{tabular}
+\end{tabular} 
 
 \end{titlepage}
 
@@ -53,8 +53,12 @@
 
 \section{Introducci\'{o}n}
 
-A pesar de su aparente simplicidad, el problema de cuantificar las diferencias entre dos estructuras de la misma prote\'{i}na no es trivial y continúa evolucionando. Debido a que el aspecto y distribuci\'{o}n de las prote\'{i}nas es aparentemente desordenado, la dimensi\'{o}n fractal  puede sintetizar toda la informaci\'{o}n que contienen estos sistemas. 
+Los cristal\'{o}grafos han observado durante mucho tiempo que las prote\'{i}nas son pol\'{i}meros muy compactos. Sin embargo, la estructura nativa que se captura en un cristal es, aunque representativa, solo es una de las muchas que una prote\'{i}na puede adoptar durante el curso de su funci\'{o}n en la c\'{e}lula viva. La noci\'{o}n de que las prote\'{i}nas son simplemente objetos tridimensionales extremadamente compactos puede ser demasiado simple. De hecho, se ha señalado desde hace tiempo la posibilidad de que las prote\'{i}nas puedan estar mejor caracterizadas por la geometr\'{i}a fractal en lugar de objetos tridimensionales compactos \cite{Enright2005}.
+En adici\'{o}n, el problema de cuantificar las diferencia entre dos estructuras de una misma prote\'{i}na no es trivial y contin\'{u}a evolucionando. Debido a que el aspecto y distribuci\'{o}n de las prote\'{i}nas es aparentemente desordenado, la dimensi\'{o}n fractal puede sintetizar toda la informaci\'{o}n que contienen estos sistemas. Desde hace varios años la dimensi\'{o}n fractal de masa se ha utilizado para identificar la distribuci\'{o}n de distintos patrones, \textit{v. gr.}, sistemas magnetoreol\'{o}gicos (piedras o polvos magnetizados o geles envejecidos) \cite{Carrillo2003}. Lo anterior sucede porque cuando se mide la dimensi\'{o}n fractal de masa a diferentes escalas, se puede obtener  informaci\'{o}n acerca de los patrones de agregaci\'{o}n; adem\'{a}s, se ha observado la aparici\'{o}n de c\'{u}mulos o clusters con propiedades multifractales, estos c\'{u}mulos tambi\'{e}n produjeron varias generaciones de clusters secuencialmente, mostrando un comportamiento lineal.
 
+Anteriormente, autores como Matthew \textit{et al.} \cite{Enright2005} han calculado la dimensi\'{o}n fractal de varias prote\'{i}nas de forma global, sin el uso de varias etapas de agregaci\'{o}n. Por lo tanto, es necesario analizar c\'{o}mo evoluciona la dimensi\'{o}n fractal de masa en el tiempo. El an\'{a}lisis multifractal encontrado por Carrillo \textit{et al.} \cite{Carrillo2003}, aplicado a diferentes tipos de estructuras (no simplemente a geles envejecidos), podr\'{i}a servir para extraer informaci\'{o}n de los patrones de agregaci\'{o}n de otros objetos en diferentes etapas. Se sabe que, en las prote\'{i}nas existe m\'{a}s de una etapa de agregaci\'{o}n o de conformaci\'{o}n, esto plantea la siguiente pregunta; ¿Se podr\'{i}a detectar estos patrones de agregaci\'{o}n en las prote\'{i}nas midiendo la dimensi\'{o}n fractal de masa en este esquema de objetos multifractales? De ser cierto lo anterior, ¿ser\'{i}a esta medida lo suficientemente precisa para distinguir entre dos prote\'{i}nas con secuencias gen\'{e}ticas similares pero estructuralmente diferentes? Para responder a estas interrogantes, es fundamental desarrollar una herramienta computacional que nos permita calcular la dimesi\'{o}n fractal de masas y llevar a cabo la pruebas exhaustivas.
+
+Es importante resaltar que, de ser cierto lo anterior, podr\'{i}a abrir la puerta a futuras aplicaciones en enfermedades. No obstante, a\'{u}n no se sabe con certeza si es posible observar la multifractalidad en prote\'{i}nas, y esta incertidumbre es parte de lo que se busca analizar.
 
 
 \section{Antecedentes}
@@ -87,7 +91,7 @@ La determinacion de la dimensi\'{o}n fractal de estructuras en crecimiento, norm
 \item Procedimientos num\'{e}ricos.
 \end{enumerate}
  
-  En el segundo caso, los datos generados num\'{e}ricamente suelen producirse mediante variaciones del m\'{e}todo de Monte Carlo. A continuaci\'{o}n, discutiremos c\'{o}mo medir D para un solo objeto. Para hacer las estimaciones m\'{a}s precisas, generalmente se calcula la dimensi\'{o}n fractal para muchos grupos y se promedia sobre los resultados. Quiz\'{a}s, el m\'{e}todo m\'{a}s simple es usar la definici\'{o}n de  D como se indica en \ref{subsec:subseccion2.1}. Por lo tanto, la dimensi\'{o}n fractal se puede obtener ajustando una l\'{i}nea recta a la parte asint\'{o}tica de los datos de  N(R), por ejemplo, usando el m\'{e}todo de m\'{i}nimos cuadrados \cite{Vicsek1992}.
+  En el segundo caso, los datos generados num\'{e}ricamente suelen producirse mediante variaciones del m\'{e}todo de Monte Carlo. A continuaci\'{o}n, discutiremos c\'{o}mo medir D para un solo objeto. Para hacer las estimaciones m\'{a}s precisas, generalmente se calcula la dimensi\'{o}n fractal para muchos grupos y se promedia sobre los resultados. Quiz\'{a}s, el m\'{e}todo m\'{a}s simple es usar la definici\'{o}n de  D como se indica en \ref{subsec:subseccion2.1}. Por lo tanto, la dimensi\'{o}n fractal se puede obtener ajustando una l\'{i}nea recta a la parte asint\'{o}tica de los datos de  N(R), \textit{v. gr.}, usando el m\'{e}todo de m\'{i}nimos cuadrados \cite{Vicsek1992}.
   
   
 \begin{comment}
@@ -146,7 +150,21 @@ Por lo tanto, \(1/D\) se puede obtener de la pendiente del gr\'{a}fico de \(\ln(
 
 \subsection{Multifractalidad}
 
-Las medidas multifactales o fractales est\'{a}n relacionadas con el estudio de una distribuci\'{o}n de cantidades f\'{i}sicas o de otro tipo en un soporte geom\'{e}trico. El soporte puede ser un plano ordinario, la superficie de un volumen, o podr\'{i}a ser en s\'{i} mismo un fractal. En general, un multifractal posee un n\'{u}mero infinito de singularidades de infinitos tipos. La multifractalidad expresa el hecho de que los puntos correspondientes a un tipo determinado de singularidad suelen formar un subconjunto fractal cuya dimensi\'{o}n depende del tipo de singularidad. La idea de que un multifractal puede ser representado en t\'{e}rminos de subconjuntos fractales entrelazados que tienen diferentes exponentes de escala.
+La multifractalidad es una propiedad de ciertos sistemas complejos donde la estructura exhibe autosimilitud a m\'{u}ltiples escalas. En otras palabras, la distribuci\'{o}n de ciertas caracter\'{i}sticas o propiedades del sistema no es uniforme, sino que var\'{i}a de manera heterog\'{e}nea en diferentes escalas espaciales o temporales. Esto significa que diferentes partes del sistema pueden exhibir diferentes grados de autosimilitud fractal, lo que resulta en una multifractalidad.
+
+En el caso espec\'{i}fico del sistemas estudiado por  Carrillo \textit{et al.}\cite{Carrillo2003}, como las dispersiones magnetorreol\'{o}gicas y otros conglomerados formados por procesos de agregaci\'{o}n, la multifractalidad se manifiesta en la variaci\'{o}n de la dimensi\'{o}n fractal a lo largo de diferentes etapas del proceso de formaci\'{o}n de estructuras. Esta variaci\'{o}n indica que la autosimilitud fractal no es constante, sino que cambia a medida que se desarrollan diferentes interacciones y se forman conglomerados de distintas generaciones. Como se observa en el gr\'{a}fico \ref{fig:Carrillo2003} , existen tres porciones claramente distinguibles, asociadas a las tres etapas de agregaci\'{o}n mencionadas anteriormente. Cada porci\'{o}n tiene un comportamiento lineal y ha sido ajustada por una l\'{i}nea recta usando el m\'{e}todo de m\'{i}nimos cuadrados. N\'{o}tese la estrecha similitud entre ambas curvas, mostrando porciones rectas que revelan procesos de agregaci\'{o}n claramente similares que generan el patr\'{o}n jer\'{a}rquico \cite{Carrillo2003}.
+
+
+\begin{figure}[h]
+\vspace{1cm}
+\centering
+{\includegraphics[width=7cm]{Carrillo2006} \par}
+\caption{ $\log_{10}N$ versus $\log_{10}r$ para estructuras formadas en un sistema magnetorreológico, para dos fracciones volumétricas de partículas, la curva inferior $\phi = 0.04$ y la superior $\phi = 0.06$. Los valores de $r$ se expresan en términos del tamaño medio de la partícula $\sigma$. Inserción: $\log_{10}(N_i - N_{i-1})$ versus $\log_{10} r_i$ correspondiente a la curva inferior. Lado derecho, micrografías de la estructura de conglomerado: (a) 700 G y (b) 400 G, ambas con $\phi = 0.06$. (c) 500 G y (d) 400 G, ambas con $\phi = 0.04$. Imagen tomada de Carrillo \textit{et al} \cite{Carrillo2003}.}
+\label{fig:Carrillo2003}
+\end{figure}
+
+   
+
 
 \subsection{Geometr\'{i}a fractal en prote\'{i}nas}
 
@@ -154,29 +172,51 @@ Ahora que hemos definido D y explicado algunos m\'{e}todos para obtenerlo, surge
 
 Una prote\'{i}na consiste en una cadena de polip\'{e}ptidos compuesta por residuos de amino\'{a}cidos unidos entre s\'{i} por enlaces pept\'{i}dicos. La cadena polipept\'{i}dica o columna vertebral forma un pol\'{i}mero lineal compuesto por unidades repetitivas que son id\'{e}nticas, excepto por los terminales de la cadena \cite{Mustafa1996}.
 
-La estructura primaria de un proteina se conoce como la secuencia de \'{a}cidos am\'{i}nicos y determina la conformaci\'{o}n nativa. Los elementos de la estructura secundaria son las l\'{a}minas a-helices y B-plisadas, mientras que la estructura terciaria se relaciona con las disposiciones espaciales generales de los residuos de amino\'{a}cidos en las prote\'{i}nas. Por lo tanto, la dimensi\'{o}n fractal se puede utilizar para caracterizar las estructuras terciarias de prote\'{i}nas y enzimas. Tambi\'{e}n se pueden describir mediante diferentes modelos fractales y diferentes tipos de dimensiones fractales. Muchos trabajos pioneros han demostrado una y otra vez que la prote\'{i}na que tiene autosimilitud estad\'{i}stica y puede ser manejada por el enfoque fractal. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de prote\'{i}nas es cierta en lo com\'{u}n solo en un sentido estad\'{i}stico, es decir, la parte no siempre se ver\'{a} exactamente como el todo. Otra diferencia entre las macromol\'{e}culas biol\'{o}gicas y los objetos ideales es que una fractal no es autosimilar en todas las escalas de longitud. Hay l\'{i}mites de tamaño superior e inferior m\'{a}s all\'{a} de los cuales una macromol\'{e}cula ya no es fractal. Por lo que la investigaci\'{o}n fractal sobre enzimas y prote\'{i}nas es actualmente un campo activo \cite{Mustafa1996}. 
+La estructura primaria de un proteina se conoce como la secuencia de \'{a}cidos am\'{i}nicos y determina la conformaci\'{o}n nativa. Los elementos de la estructura secundaria son las $\alpha$-h\'{e}lices y l\'{a}minas $\beta$, mientras que la estructura terciaria se relaciona con las disposiciones espaciales generales de los residuos de amino\'{a}cidos en las prote\'{i}nas. Por lo tanto, la dimensi\'{o}n fractal se puede utilizar para caracterizar las estructuras terciarias de prote\'{i}nas y enzimas. Tambi\'{e}n se pueden describir mediante diferentes modelos fractales y diferentes tipos de dimensiones fractales. Muchos trabajos pioneros han demostrado una y otra vez que la prote\'{i}na que tiene autosimilitud estad\'{i}stica y puede ser manejada por el enfoque fractal. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de prote\'{i}nas es cierta en lo com\'{u}n solo en un sentido estad\'{i}stico, es decir, la parte no siempre se ver\'{a} exactamente como el todo. Otra diferencia entre las macromol\'{e}culas biol\'{o}gicas y los objetos ideales es que una fractal no es autosimilar en todas las escalas de longitud. Hay l\'{i}mites de tamaño superior e inferior m\'{a}s all\'{a} de los cuales una macromol\'{e}cula ya no es fractal. Por lo que la investigaci\'{o}n fractal sobre enzimas y prote\'{i}nas es actualmente un campo activo \cite{Mustafa1996}. 
 
 
 
 \subsection{Medidas basadas en distancia de la similitud estructural de prote\'{i}nas: RMSD}
 
-A pesar de su aparente simplicidad, el problema de cuantificar las diferencias entre dos estructuras de la misma proteína o complejo no es trivial y continúa evolucionando \cite{Kufareva2012}. La Desviaci\'{o}n Cuadr\'{a}tica Media (RMSD) es la medida cuantitativa m\'{a}s com\'{u}nmente usada para la similitud entre dos conjuntos de coordenadas at\'{o}micas superpuestas. Los valores de RMSD se presentan en Ångströms y se calculan mediante:
+Auque el problema de que medir las diferencias entre dos estructuras similares 
+parece un problema sencillo, su cuantificaci\'{o}n puede ser compleja 
+y sigue evolucionando \cite{Kufareva2012}. Una de las medidas 
+cuantitativas m\'{a}s comunes para determinar la similitud entre 
+dos conjuntos de coordenadas at\'{o}micas es la Desviaci\'{o}n Cuadr\'{a}tica Media 
+(RMSD, por sus siglas en ingl\'{e}s), se expresa como:
 
 \begin{equation}
 RMSD = \sqrt{\frac{1}{n} \sum_{i=1}^{n} d_i^2}
 \end{equation}
 
-donde el promedio se realiza sobre los \(n\) pares de \'{a}tomos equivalentes y \(d_i\) es la distancia entre los dos \'{a}tomos del par \(i\). 
+donde \(n\) es el n\'{u}mero total de pares de \'{a}tomos considerados 
+y \(d_i\) es la distancia entre los \'{a}tomos del par \(i\).
 
-El RMSD se puede calcular para cualquier tipo y subconjunto de \'{a}tomos; por ejemplo, para los \'{a}tomos \(C_{\alpha}\) de toda la prote\'{i}na, para los \'{a}tomos \(C_{\alpha}\) de todos los residuos en un subconjunto espec\'{i}fico (como las h\'{e}lices transmembrana, el sitio de uni\'{o}n o un bucle), todos los \'{a}tomos pesados de un subconjunto espec\'{i}fico de residuos, o todos los \'{a}tomos pesados en un ligando de mol\'{e}cula pequeña. La principal desventaja del RMSD es que est\'{a} dominado por las amplitudes de errores. Dos estructuras que son id\'{e}nticas excepto por la posici\'{o}n de un solo bucle o un extremo flexible generalmente tienen un RMSD global del esqueleto grande y no se pueden superponer eficazmente mediante ning\'{u}n algoritmo que optimice el RMSD global.
-\clearpage
+
+El uso del RMSD es crucial en campos como la bioqu\'{i}mica 
+y la qu\'{i}mica computacional porque permite comparar modelos generados por 
+simulaciones o experimentos para verificar su similitud con estructuras 
+conocidas, como prote\'{i}nas o complejos moleculares.
+
+No obstante, el RMSD puede ser engañoso cuando se trata de diferencias
+ locales significativas. Por ejemplo, dos estructuras que difieren solo 
+ en un segmento pequeño, como un bucle o un extremo flexible, pueden tener 
+ un RMSD global alto, lo que dificulta el an\'{a}lisis. Por esta raz\'{o}n, encontrar
+  m\'{e}todos alternativos o enfoques complementarios para comparar estructuras 
+  es fundamental. Estas alternativas pueden enfocarse en las regiones clave,
+   permitiendo a los investigadores ignorar las variaciones menores y 
+  centrarse en las partes cr\'{i}ticas de las estructuras.
 
 \begin{comment}
-\subsection{Enfermedades gen\'{e}ticas}
-
-Las tubulinas son las prote\'{i}nas principales que componen los microt\'{u}bulos (estructuras cil\'{i}ndricas huecas que forman parte del citoesqueleto y desempeñan un papel crucial en la divisi\'{o}n celular, el transporte intracelular de ves\'{i}culas y org\'{a}nulos, y la estabilidad celular).
-Las tubulinopat\'{i}as son un grupo de enfermedades gen\'{e}ticas raras que afectan la funci\'{o}n de las tubulinas. Las tubulinopat\'{i}as pueden ser causadas por mutaciones gen\'{e}ticas que afectan a los genes que codifican las tubulinas o las prote\'{i}nas asociadas con los microt\'{u}bulos. Estas mutaciones pueden interferir con la funci\'{o}n normal de las tubulinas y los microt\'{u}bulos, lo que resulta en una amplia variedad de manifestaciones cl\'{i}nicas. Las caracter\'{i}sticas cl\'{i}nicas de las tubulinopat\'{i}as pueden incluir anomal\'{i}as del desarrollo del sistema nervioso central, como malformaciones cerebrales, trastornos del desarrollo cognitivo y del habla, retraso en el desarrollo motor, epilepsia y trastornos del movimiento. Tambi\'{e}n pueden afectar otros sistemas del cuerpo, como el sistema ocular y el sistema hematol\'{o}gico. Algunos ejemplos de tubulinopat\'{i}as incluyen el s\'{i}ndrome de lissencefalia tipo 2 (tambi\'{e}n conocido como s\'{i}ndrome de Miller-Dieker), el s\'{i}ndrome de pachygyria liso, y la displasia cortical focal. Dado que las tubulinopat\'{i}as son enfermedades raras, la investigaci\'{o}n en este campo est\'{a} en curso para comprender mejor su patog\'{e}nesis, sus manifestaciones cl\'{i}nicas y para desarrollar enfoques terap\'{e}uticos dirigidos.
+Sin embargo, el RMSD tiene una desventaja clave: es muy sensible a
+ cambios grandes en segmentos pequeños. Por lo tanto, aunque dos 
+ estructuras sean muy parecidas en su mayor\'{i}a, un pequeño cambio, 
+ como la rotaci\'{o}n de un bucle o la flexibilidad de un extremo,
+  puede resultar en un RMSD alto, complicando la comparaci\'{o}n eficaz.
 \end{comment}
+
+\clearpage
+
 
 \section{Objetivos}
 \subsection{Objetivo general}
@@ -249,7 +289,8 @@ Presentaci\'{o}n de protocolo &  &  &  &  &  &  &  &  &  &  & X & \\
 \hline
 Preparaci\'{o}n de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
 \hline
-& \multicolumn{5}{c|}{2024} & \multicolumn{7}{c||}{2025}\\\hline
+& \multicolumn{5}{c|}{2024} & \multicolumn{7}{c||}{2025}
+\\\hline
 & Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
 \hline
 XXII RMFQT &  &  &  & X &  &  &  &  &  &  &  &\\
