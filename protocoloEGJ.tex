@@ -53,61 +53,110 @@
 
 \section{Introducci\'{o}n}
 
-Los cristal\'{o}grafos han observado durante mucho tiempo que las prote\'{i}nas son pol\'{i}meros muy compactos. Sin embargo, la estructura nativa que se captura en un cristal es, aunque representativa, solo es una de las muchas que una prote\'{i}na puede adoptar durante el curso de su funci\'{o}n en la c\'{e}lula viva. La noci\'{o}n de que las prote\'{i}nas son simplemente objetos tridimensionales extremadamente compactos puede ser demasiado simple. De hecho, se ha señalado desde hace tiempo la posibilidad de que las prote\'{i}nas puedan estar mejor caracterizadas por la geometr\'{i}a fractal en lugar de objetos tridimensionales compactos \cite{Enright2005}.
-En adici\'{o}n, el problema de cuantificar las diferencia entre dos estructuras de una misma prote\'{i}na no es trivial y contin\'{u}a evolucionando. Debido a que el aspecto y distribuci\'{o}n de las prote\'{i}nas es aparentemente desordenado, la dimensi\'{o}n fractal puede sintetizar toda la informaci\'{o}n que contienen estos sistemas. Desde hace varios años la dimensi\'{o}n fractal de masa se ha utilizado para identificar la distribuci\'{o}n de distintos patrones, \textit{v. gr.}, sistemas magnetoreol\'{o}gicos (piedras o polvos magnetizados o geles envejecidos) \cite{Carrillo2003}. Lo anterior sucede porque cuando se mide la dimensi\'{o}n fractal de masa a diferentes escalas, se puede obtener  informaci\'{o}n acerca de los patrones de agregaci\'{o}n; adem\'{a}s, se ha observado la aparici\'{o}n de c\'{u}mulos o clusters con propiedades multifractales, estos c\'{u}mulos tambi\'{e}n produjeron varias generaciones de clusters secuencialmente, mostrando un comportamiento lineal.
+Los cristal\'{o}grafos han observado durante mucho tiempo que las prote\'{i}nas son pol\'{i}meros muy compactos. Sin embargo, la estructura nativa que se captura en un cristal es, aunque representativa, solo  una de las muchas que una prote\'{i}na puede adoptar durante el curso de su funci\'{o}n en la c\'{e}lula viva. La noci\'{o}n de que las prote\'{i}nas son simplemente objetos tridimensionales extremadamente compactos puede ser demasiado simple. De hecho, se ha señalado desde hace tiempo la posibilidad de que las prote\'{i}nas puedan estar mejor caracterizadas por la geometr\'{i}a fractal en lugar de objetos tridimensionales compactos \cite{Enright2005}.
 
-Anteriormente, autores como Matthew \textit{et al.} \cite{Enright2005} han calculado la dimensi\'{o}n fractal de varias prote\'{i}nas de forma global, sin el uso de varias etapas de agregaci\'{o}n. Por lo tanto, es necesario analizar c\'{o}mo evoluciona la dimensi\'{o}n fractal de masa en el tiempo. El an\'{a}lisis multifractal encontrado por Carrillo \textit{et al.} \cite{Carrillo2003}, aplicado a diferentes tipos de estructuras (no simplemente a geles envejecidos), podr\'{i}a servir para extraer informaci\'{o}n de los patrones de agregaci\'{o}n de otros objetos en diferentes etapas. Se sabe que, en las prote\'{i}nas existe m\'{a}s de una etapa de agregaci\'{o}n o de conformaci\'{o}n, esto plantea la siguiente pregunta; ¿Se podr\'{i}a detectar estos patrones de agregaci\'{o}n en las prote\'{i}nas midiendo la dimensi\'{o}n fractal de masa en este esquema de objetos multifractales? De ser cierto lo anterior, ¿ser\'{i}a esta medida lo suficientemente precisa para distinguir entre dos prote\'{i}nas con secuencias gen\'{e}ticas similares pero estructuralmente diferentes? Para responder a estas interrogantes, es fundamental desarrollar una herramienta computacional que nos permita calcular la dimesi\'{o}n fractal de masas y llevar a cabo la pruebas exhaustivas.
+Adicionalmente, el problema de cuantificar las diferencia entre dos estructuras de una misma prote\'{i}na no es trivial y contin\'{u}a evolucionando \cite{Kufareva2012}. Una de las medidas 
+cuantitativas m\'{a}s comunes para determinar la similitud entre 
+dos conjuntos de coordenadas at\'{o}micas es la Desviaci\'{o}n Cuadr\'{a}tica Media 
+(RMSD, por sus siglas en ingl\'{e}s), el uso del RMSD es crucial en campos como la bioqu\'{i}mica 
+y la qu\'{i}mica computacional porque permite comparar modelos generados por 
+simulaciones o experimentos para verificar su similitud con estructuras 
+conocidas, como prote\'{i}nas o complejos moleculares. 
+No obstante, el RMSD puede ser engañoso cuando se trata de diferencias
+ locales significativas. Por ejemplo, al analizar dos estructuras que difieren solo 
+ en un segmento pequeño, como un bucle o un extremo flexible, pueden tener 
+ un RMSD global alto, lo que dificulta el an\'{a}lisis. Por esta raz\'{o}n, encontrar
+  m\'{e}todos alternativos o enfoques complementarios para comparar estructuras 
+  es fundamental. Estas alternativas pueden enfocarse en las regiones clave,
+   permitiendo a los investigadores ignorar las variaciones menores y 
+  centrarse en las partes cr\'{i}ticas de las estructuras \cite{Kufareva2012}.
 
-Es importante resaltar que, de ser cierto lo anterior, podr\'{i}a abrir la puerta a futuras aplicaciones en enfermedades. No obstante, a\'{u}n no se sabe con certeza si es posible observar la multifractalidad en prote\'{i}nas, y esta incertidumbre es parte de lo que se busca analizar.
+Dicho lo anterior, la dimensi\'{o}n fractal puede sintetizar toda la informaci\'{o}n que contienen los sistemas prote\'{i}cos. Adem\'{a}s, desde hace varios años, la dimensi\'{o}n fractal de masa se ha utilizado para identificar la distribuci\'{o}n de distintos patrones, \textit{v. gr.}, sistemas magnetoreol\'{o}gicos (piedras o polvos magnetizados o geles envejecidos) \cite{Carrillo2003}. Lo anterior sucede porque cuando se mide la dimensi\'{o}n fractal de masa a diferentes escalas, se puede obtener  informaci\'{o}n acerca de los patrones de agregaci\'{o}n; adem\'{a}s, se ha observado la aparici\'{o}n de c\'{u}mulos o clusters con propiedades multifractales, estos c\'{u}mulos tambi\'{e}n produjeron varias generaciones de clusters secuencialmente, mostrando un comportamiento lineal.
+
+Regresando a las prote\'{i}nas, autores como Matthew \textit{et al.} \cite{Enright2005} han calculado la dimensi\'{o}n fractal de varias prote\'{i}nas de forma global, sin el an\'{a}lisis de varias etapas de agregaci\'{o}n. Es decir, sin analizar como cambian los patrones de agregaci\'{o}n cuando se cambia la escala de medici\'{o}n de la dimensi\'{o}n fractal de masa.
+
+El an\'{a}lisis multifractal encontrado por Carrillo \textit{et al.} \cite{Carrillo2003}, aplicado a diferentes tipos de estructuras (no simplemente a geles envejecidos), podr\'{i}a servir para extraer informaci\'{o}n de los patrones de agregaci\'{o}n de otros objetos en diferentes etapas. Se sabe que, en las prote\'{i}nas existe m\'{a}s de una etapa de agregaci\'{o}n o de conformaci\'{o}n, esto plantea la siguiente pregunta; ¿Se podr\'{i}a detectar estos patrones de agregaci\'{o}n en las prote\'{i}nas midiendo la dimensi\'{o}n fractal de masa en este esquema de objetos multifractales? De ser cierto lo anterior, ¿ser\'{i}a esta medida lo suficientemente precisa para distinguir entre dos prote\'{i}nas con secuencias gen\'{e}ticas similares pero estructuralmente diferentes? Para responder a estas interrogantes, es fundamental desarrollar una herramienta computacional que nos permita calcular la dimensi\'{o}n fractal de masa y llevar a cabo pruebas exhaustivas. Es importante resaltar que, de ser cierto lo anterior, se podr\'{i}a abrir la puerta a futuras aplicaciones en enfermedades. No obstante, a\'{u}n no se sabe con certeza si es posible observar la multifractalidad en prote\'{i}nas, y esta incertidumbre es parte de lo que se busca analizar.
 
 
 \section{Antecedentes}
 
-\subsection{Fractal y dimesi\'{o}n fractal}
+\subsection{Fractal y dimensi\'{o}n fractal}
 \label{subsec:subseccion2.1}
 
 
 Existen objetos que tienen la propiedad de que su geometr\'{i}a tenga una apariencia fragmentada o con una morfolog\'{i}a aparentemente irregular y que no cambia a cualquiera que sea la escala a la que se analice; a estos objetos se les conoce como fractales. Los fractales est\'{a}n presentes en un gran n\'{u}mero de sistemas complejos que van desde agregados microsc\'{o}picos hasta c\'{u}mulos de galaxias, por lo tanto, existen objetos que se pueden describir en t\'{e}rminos de su geometr\'{i}a fractal \cite{Vicsek1992}. 
 
-La autosimilitud o invariancia de escala es la propiedad m\'{a}s importante en la geometr\'{i}a fractal porque puede modelar la complejidad de cualquier objeto. La dimensi\'{o}n fractal \textbf{(D)} es el \'{i}ndice num\'{e}rico que cuantifica esta complejidad, midiendo la tasa de adici\'{o}n de detalles estructurales con una mayor ampliaci\'{o}n.
+La autosimilitud o invariancia de escala es la propiedad m\'{a}s importante en la geometr\'{i}a fractal porque puede modelar la complejidad de cualquier objeto. La dimensi\'{o}n fractal \textbf{(D)} es el \'{i}ndice num\'{e}rico que cuantifica esta complejidad, midiendo la tasa de adici\'{o}n de detalles estructurales con una mayor ampliaci\'{o}n. En la literatura cient\'{i}fica puede encontrase una gran variedad de m\'{e}todos para determinar la dimensi\'{o}n fractal, algunos de ellos son la dimensi\'{o}n fractal Hausdorff-Besicovitch y la dimensi\'{o}n fractal Minkowski.
 
-En la literatura cient\'{i}fica puede encontrase una gran variedad de m\'{e}todos para determinar la dimensi\'{o}n fractal, algunos de ellos son la dimensi\'{o}n fractal Hausdorff-Besicovitch, la dimensi\'{o}n fractal Minkowski y la dimesi\'{o}n de fractal por conteo de cajas. La dimensi\'{o}n fractal puede representarse como:
 
-\begin{equation}
- D = \frac{\ln(N)}{\ln(1/\varepsilon)}
-\end{equation}
-
-Donde \(N\) es el n\'{u}mero de unidades constitutivas en la generaci\'{o}n actual que han emergido de una unidad constitutiva en la generaci\'{o}n anterior, cuando se avanza en la construcci\'{o}n del patr\'{o}n una etapa m\'{a}s adelante, o el n\'{u}mero de iniciadores reducidos que constituyen el generador. Se puede generalizar la ecuaci\'{o}n anterior para examinar la autosimilitud de varios patrones aleatorios y determinar \(D\).
- 
-\subsection{Determinacion de la dimensi\'{o}n fractal}
+\subsection{Multifractalidad en geles}
 \label{subsec:subseccion2.2}
 
+En \'{e}sta secci\'{o}n, expondremos brevemente el
+trabajo que nos inspir\'{o} para proponer este proyecto, 
+originalmente pensado en el \'{a}rea de f\'{i}sica de materiales 
+enfocado en sistemas magnetorreol\'{o}gicos. 
 
-La determinacion de la dimensi\'{o}n fractal de estructuras en crecimiento, normalmente resulta de la aplicaci\'{o}n directa de las definiciones para D, sin embargo, esto es ineficaz. Es necesario medir o calcular cantidades que se puede demostrar que est\'{a}n relacionadas con la dimensi\'{o}n fractal de los objetos. Existen  tres tipos de enfoques principales para la determinaci\'{o}n de estas cantidades: (i) el experimental, (ii) el te\'{o}rico y (iii) el inform\'{a}tico \cite{Vicsek1992}. El enfoque inform\'{a}tico se obtienen por dos m\'{e}todos principales: 
+La multifractalidad es una propiedad de ciertos sistemas
+ complejos donde la estructura exhibe autosimilitud a m\'{u}ltiples 
+ escalas. En otras palabras, la distribuci\'{o}n de ciertas 
+ caracter\'{i}sticas o propiedades del sistema no es uniforme,
+  sino que var\'{i}a de manera heterog\'{e}nea en diferentes 
+  escalas espaciales o temporales. Esto significa que diferentes
+   partes del sistema pueden exhibir diferentes grados de autosimilitud 
+   fractal, lo que resulta en una multifractalidad.
+
+En el caso espec\'{i}fico del sistemas estudiado por  
+Carrillo \textit{et al.}\cite{Carrillo2003}, como las dispersiones
+ magnetorreol\'{o}gicas y otros conglomerados formados 
+ por procesos de agregaci\'{o}n, la multifractalidad se 
+ manifiesta en la variaci\'{o}n de la dimensi\'{o}n fractal 
+ a lo largo de diferentes etapas del proceso de formaci\'{o}n 
+ de estructuras. Esta variaci\'{o}n indica que la autosimilitud
+  fractal no es constante, sino que cambia a medida que se 
+  desarrollan diferentes interacciones y se forman conglomerados 
+  de distintas generaciones. Como se observa en el gr\'{a}fico \ref{fig:Carrillo2003},
+   existen tres porciones claramente distinguibles, asociadas a las tres etapas 
+   de agregaci\'{o}n mencionadas anteriormente. Cada porci\'{o}n tiene un comportamiento lineal y ha sido ajustada por una l\'{i}nea recta usando el m\'{e}todo de m\'{i}nimos cuadrados. N\'{o}tese la estrecha similitud entre ambas curvas, mostrando porciones rectas que revelan procesos de agregaci\'{o}n claramente similares que generan el patr\'{o}n jer\'{a}rquico \cite{Carrillo2003}.
 
 
-\begin{enumerate}
-\item Digitalizando im\'{a}genes.
-\item Procedimientos num\'{e}ricos.
-\end{enumerate}
+\begin{figure}[h!]
+\vspace{1cm}
+\centering
+{\includegraphics[width=7cm]{Carrillo2006} \par}
+\caption{ $\log_{10}N$ vs $\log_{10}r$ para estructuras formadas en un sistema magnetorreológico, para dos fracciones volumétricas de partículas $(\phi)$, la curva inferior $\phi = 0.04$ y la superior $\phi = 0.06$. Los valores de $r$ se expresan en términos del tamaño medio de la partícula $(\sigma)$. Inserción: $\log_{10}(N_i - N_{i-1})$ vs $\log_{10} r_i$ correspondiente a la curva inferior. Lado derecho, micrografías de la estructura de conglomerado: (a) 700 G y (b) 400 G, ambas con $\phi = 0.06$. (c) 500 G y (d) 400 G, ambas con $\phi = 0.04$. Imagen tomada de Carrillo \textit{et al} \cite{Carrillo2003}.}
+\label{fig:Carrillo2003}
+\end{figure}
  
-  En el segundo caso, los datos generados num\'{e}ricamente suelen producirse mediante variaciones del m\'{e}todo de Monte Carlo. A continuaci\'{o}n, discutiremos c\'{o}mo medir D para un solo objeto. Para hacer las estimaciones m\'{a}s precisas, generalmente se calcula la dimensi\'{o}n fractal para muchos grupos y se promedia sobre los resultados. Quiz\'{a}s, el m\'{e}todo m\'{a}s simple es usar la definici\'{o}n de  D como se indica en \ref{subsec:subseccion2.1}. Por lo tanto, la dimensi\'{o}n fractal se puede obtener ajustando una l\'{i}nea recta a la parte asint\'{o}tica de los datos de  N(R), \textit{v. gr.}, usando el m\'{e}todo de m\'{i}nimos cuadrados \cite{Vicsek1992}.
-  
-  
-\begin{comment}
-\subsection{M\'{e}todo de conteo de cajas}
+\clearpage  
+\subsection{Determinaci\'{o}n de la dimensi\'{o}n fractal}
+\label{subsec:subseccion2.3}
 
-Este m\'{e}todo consiste en dividir el espacio que contiene un patr\'{o}n dado en celdas o p\'{i}xeles de longitud (E), despu\'{e}s se cuenta el n\'{u}mero de celdas o p\'{i}xeles que existen \(N(E)\). El n\'{u}mero \(N(E)\) se mide variando el valor de \(E\) y traz\'{a}ndolo en escala logar\'{i}tmica frente a \(E\), esta es una forma pr\'{a}ctica de comprobar la autosimilitud de un patr\'{o}n determinado. Si los puntos se ajustan a una l\'{i}nea recta, se puede concluir que el patr\'{o}n dado es autosimilar, y la dimensi\'{o}n fractal \(D\) se obtiene del valor de la pendiente de la l\'{i}nea \cite{Mustafa1996}. 
-\end{comment}
+
+La determinaci\'{o}n de la dimensi\'{o}n fractal de estructuras en crecimiento normalmente resulta de la aplicaci\'{o}n directa de las definiciones para D, sin embargo, esto es ineficaz. Es necesario medir o calcular cantidades que se puede demostrar que est\'{a}n relacionadas con la dimensi\'{o}n fractal de los objetos. Existen  tres tipos de enfoques principales para la determinaci\'{o}n de estas cantidades: (i) el experimental, (ii) el te\'{o}rico y (iii) el inform\'{a}tico \cite{Vicsek1992}. El enfoque inform\'{a}tico se obtienen digitalizando im\'{a}genes o por procedimientos num\'{e}ricos.
+ 
+Los datos generados num\'{e}ricamente suelen producirse mediante variaciones del m\'{e}todo de Monte Carlo \cite{Mustafa1996}. Para hacer las estimaciones m\'{a}s precisas, generalmente se calcula la dimensi\'{o}n fractal para muchos grupos y se promedia sobre los resultados. Quiz\'{a}s, el m\'{e}todo m\'{a}s simple es usar la definici\'{o}n de  D como se indica en la secci\'{o}n \ref{subsec:subseccion2.1}. Por lo tanto, la dimensi\'{o}n fractal se puede obtener ajustando una l\'{i}nea recta a la parte asint\'{o}tica de los datos, \textit{v. gr.}, usando el m\'{e}todo de m\'{i}nimos cuadrados \cite{Vicsek1992}, v\'{e}ase la figura \ref{fig:Vicsek-Fractal}.
+
+En las secciones \ref{subsec:subseccion2.4}, \ref{subsec:subseccion2.5} y \ref{subsec:subseccion2.6} se hablar\'{a} sobre algunos m\'{e}todos para determinar D. 
+  
+\begin{figure}[h!]
+\vspace{1cm}
+\centering
+{\includegraphics[width=6cm]{Vicsek-Fractal} \par}
+\caption{ Gráfico esquem\'{a}tico de $Ln[N(R)]$ vs $Ln R$  del número de partículas N(R) que pertenecen a un fractal y que se encuentran dentro de una esfera de radio R. Si R es menor que el tamaño de la partícula o mayor que el tamaño lineal de la estructura, se observar\'{a} un comportamiento trivial. La dimensión fractal se obtiene ajustando una línea recta a los datos en la región de escala. Imagen tomada del libro Fractal Growth Phenomena - Tam\'{a}s Vicsek. World Scientific Publishing Company, 1992 \cite{Vicsek1992}.}
+\label{fig:Vicsek-Fractal}
+\end{figure}
+ 
 
 \subsection{Relaci\'{o}n entre Masa y radio}
+\label{subsec:subseccion2.4}
 
-La relaci\'{o}n masa-radio es \'{u}til para estimar la dimensi\'{o}n de objetos similares a grupos (redes, vasos sangu\'{i}neos, grupos de agregaci\'{o}n). Consiste en seleccionar un punto de origen en el objeto (normalmente el centro de masa) y contar el n\'{u}mero de part\'{i}culas (masa = p\'{i}xeles) que componen el objeto en un radio del origen. Para un objeto euclidiano bidimensional, la relaci\'{o}n masa-radio es:
+La relaci\'{o}n masa-radio es \'{u}til para estimar la dimensi\'{o}n de objetos similares a grupos (redes, vasos sangu\'{i}neos, grupos de agregaci\'{o}n). Consiste en seleccionar un punto de origen en el objeto (normalmente el centro de masa) y contar el n\'{u}mero de part\'{i}culas que componen el objeto en un radio del origen. Para un objeto euclidiano bidimensional, la relaci\'{o}n masa-radio es:
 \begin{equation}
 M(r) \propto r^{2}
 \end{equation}
 
-Por ejemplo, el \'{a}rea de un plano bajo discos de tamaño creciente es proporcional al cuadrado del radio del disco de medici\'{o}n. El exponente es por tanto la dimensi\'{o}n (de hecho, un cuadrado es bidimensional), pero la masa de un objeto fractal incrustado en dos dimensiones cambia con un exponente fraccionario:
+Por ejemplo, el \'{a}rea de un plano bajo discos de tamaño creciente es proporcional al cuadrado del radio del disco de medici\'{o}n. El exponente es la dimensi\'{o}n, pero la masa de un objeto fractal incrustado en dos dimensiones cambia con un exponente fraccionario:
 
 \begin{equation}
 M(r) \propto r^{D} 
@@ -123,97 +172,46 @@ Se calcula como la pendiente de la regresi\'{o}n lineal de $log(M(r))$ de $log(r
 
 
 \subsection{M\'{e}todo de masa}
+\label{subsec:subseccion2.5}
 
-Es una medida similar al m\'{e}todo de conteo de cajas, la diferencia principal es el uso de c\'{i}rculos en lugar de celdas o p\'{i}xeles. Consiste en selecionar un punto de origen en el objeto de estudio (que usualmente es el centro de masas) y contar el n\'{u}mero de part\'{i}culas (masa = c\'{i}rculos) que componen 	el objeto en un radio r desde el origen. Para dos dimesiones la relaci\'{o}n entre masa y radio es:
+
+Es una medida similar al m\'{e}todo de conteo de cajas, 
+la diferencia principal es el uso de c\'{i}rculos en lugar 
+de celdas. Consiste en selecionar un punto de
+ origen en el objeto de estudio (que usualmente es el centro de masas) 
+ y contar el n\'{u}mero de part\'{i}culas que componen el objeto en 
+ un radio r desde el origen. Para dos dimensiones la relaci\'{o}n 
+ entre masa y radio es:
 
 \begin{equation}
 \mu(d) = Ad^D
 \end{equation}
 
-Donde $\mu(d)$ es el n\'{u}mero de pixeles en una caja de tamaño d, d es el di\'{a}metro longitud de la caja, A es un variable y D es la dimensi\'{o}n fractal\cite{Mustafa1996}. 
+Donde $\mu(d)$ es el n\'{u}mero de part\'{i}culas en una caja de tamaño d, d es el di\'{a}metro longitud de la caja, A es un variable y D es la dimensi\'{o}n fractal\cite{Mustafa1996}. 
 
 \subsection{Radio de giro}
+\label{subsec:subseccion2.6}
 
-Existen estructuras que crecen mediante la adici\'{o}n sucesiva de part\'{i}culas al objeto. Esta situaci\'{o}n es com\'{u}n, por ejemplo, en simulaciones de Monte Carlo, donde se registra el n\'{u}mero total de part\'{i}culas dentro de un c\'{u}mulo durante el crecimiento. Por lo tanto, es necesario calcular una cantidad llamada radio de giro  \(R_g(N)\) usando la siguiente expresi\'{o}n:
+
+Existe una medida que es ocupada por los bioqu\'{i}micos para determinar de forma global, que tan compacta es la estructura de una prote\'{i}na. 
+Esta medida es el radio de giro. El radio de giro es la distanc\'{i}a que hay entre cada \'{a}tomo de la mol\'{e}cula a 
+su centro de masas. Un valor alto de $R_g$ indica una proteína más extendida, mientras que un radio de giro menor sugiere una proteína más compacta  \cite{Mroczka2012, Vicsek1992}. 
+Matemat\'{i}camente se expresa como: 
 
 \begin{equation}
-R_g = \sqrt{\frac{1}{N} \sum_{i=1}^{N} \| r_i - r_c \|^2}
+R_g = \sqrt{\frac{\sum_{i} m_{i}r_{i}^{2}}{\sum_{i} m_{i}}}
 \end{equation}
 
-donde \(r_i\) es la distancia de la \(i\)\'{e}sima part\'{i}cula desde el centro de masa del c\'{u}mulo y \(N\) es el n\'{u}mero total de part\'{i}culas en el c\'{u}mulo en la etapa dada del proceso de crecimiento. Luego, se asume que:
-
-\begin{equation}
-R_g(N) \approx N^{1/D}
-\end{equation}
-
-Por lo tanto, \(1/D\) se puede obtener de la pendiente del gr\'{a}fico de \(\ln(R_g)\) como funci\'{o}n de \(\ln(N)\). Esta relaci\'{o}n corresponde a las siguientes suposiciones: i) en el r\'{e}gimen asint\'{o}tico, \(R_g\) es proporcional linealmente al radio total del c\'{u}mulo, ii) las correcciones debido a efectos de borde se pueden ignorar y iii) la estructura no es un multifractal geom\'{e}trico \cite{Mroczka2012, Vicsek1992}.
-
-\subsection{Multifractalidad}
-
-La multifractalidad es una propiedad de ciertos sistemas complejos donde la estructura exhibe autosimilitud a m\'{u}ltiples escalas. En otras palabras, la distribuci\'{o}n de ciertas caracter\'{i}sticas o propiedades del sistema no es uniforme, sino que var\'{i}a de manera heterog\'{e}nea en diferentes escalas espaciales o temporales. Esto significa que diferentes partes del sistema pueden exhibir diferentes grados de autosimilitud fractal, lo que resulta en una multifractalidad.
-
-En el caso espec\'{i}fico del sistemas estudiado por  Carrillo \textit{et al.}\cite{Carrillo2003}, como las dispersiones magnetorreol\'{o}gicas y otros conglomerados formados por procesos de agregaci\'{o}n, la multifractalidad se manifiesta en la variaci\'{o}n de la dimensi\'{o}n fractal a lo largo de diferentes etapas del proceso de formaci\'{o}n de estructuras. Esta variaci\'{o}n indica que la autosimilitud fractal no es constante, sino que cambia a medida que se desarrollan diferentes interacciones y se forman conglomerados de distintas generaciones. Como se observa en el gr\'{a}fico \ref{fig:Carrillo2003} , existen tres porciones claramente distinguibles, asociadas a las tres etapas de agregaci\'{o}n mencionadas anteriormente. Cada porci\'{o}n tiene un comportamiento lineal y ha sido ajustada por una l\'{i}nea recta usando el m\'{e}todo de m\'{i}nimos cuadrados. N\'{o}tese la estrecha similitud entre ambas curvas, mostrando porciones rectas que revelan procesos de agregaci\'{o}n claramente similares que generan el patr\'{o}n jer\'{a}rquico \cite{Carrillo2003}.
-
-
-\begin{figure}[h]
-\vspace{1cm}
-\centering
-{\includegraphics[width=7cm]{Carrillo2006} \par}
-\caption{ $\log_{10}N$ versus $\log_{10}r$ para estructuras formadas en un sistema magnetorreológico, para dos fracciones volumétricas de partículas, la curva inferior $\phi = 0.04$ y la superior $\phi = 0.06$. Los valores de $r$ se expresan en términos del tamaño medio de la partícula $\sigma$. Inserción: $\log_{10}(N_i - N_{i-1})$ versus $\log_{10} r_i$ correspondiente a la curva inferior. Lado derecho, micrografías de la estructura de conglomerado: (a) 700 G y (b) 400 G, ambas con $\phi = 0.06$. (c) 500 G y (d) 400 G, ambas con $\phi = 0.04$. Imagen tomada de Carrillo \textit{et al} \cite{Carrillo2003}.}
-\label{fig:Carrillo2003}
-\end{figure}
+Para una partícula rígida, \( m_i \) son los elementos de masa, que est\'{a}n ubicados a una distancia \( r_i \) desde el centro de masa, \(R_g\) es el radio de giro \cite{IUPAC2019}.
 
    
-
-
 \subsection{Geometr\'{i}a fractal en prote\'{i}nas}
-
-Ahora que hemos definido D y explicado algunos m\'{e}todos para obtenerlo, surge naturalmente la pregunta de si el conocimiento de la magnitud de la dimensi\'{o}n tiene alguna utilidad. Las respuestas provienen de varios experimentos en los que se ha empleado para cuantificar algunos aspectos de la morfolog\'{i}a proteica. Dado que la estructura de las prote\'{i}nas tiene una forma tan compleja que solo se puede analizar adecuadamente mediante el enfoque de la geometr\'{i}a fractal \cite{Mustafa1996}. 
-
-Una prote\'{i}na consiste en una cadena de polip\'{e}ptidos compuesta por residuos de amino\'{a}cidos unidos entre s\'{i} por enlaces pept\'{i}dicos. La cadena polipept\'{i}dica o columna vertebral forma un pol\'{i}mero lineal compuesto por unidades repetitivas que son id\'{e}nticas, excepto por los terminales de la cadena \cite{Mustafa1996}.
-
-La estructura primaria de un proteina se conoce como la secuencia de \'{a}cidos am\'{i}nicos y determina la conformaci\'{o}n nativa. Los elementos de la estructura secundaria son las $\alpha$-h\'{e}lices y l\'{a}minas $\beta$, mientras que la estructura terciaria se relaciona con las disposiciones espaciales generales de los residuos de amino\'{a}cidos en las prote\'{i}nas. Por lo tanto, la dimensi\'{o}n fractal se puede utilizar para caracterizar las estructuras terciarias de prote\'{i}nas y enzimas. Tambi\'{e}n se pueden describir mediante diferentes modelos fractales y diferentes tipos de dimensiones fractales. Muchos trabajos pioneros han demostrado una y otra vez que la prote\'{i}na que tiene autosimilitud estad\'{i}stica y puede ser manejada por el enfoque fractal. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de prote\'{i}nas es cierta en lo com\'{u}n solo en un sentido estad\'{i}stico, es decir, la parte no siempre se ver\'{a} exactamente como el todo. Otra diferencia entre las macromol\'{e}culas biol\'{o}gicas y los objetos ideales es que una fractal no es autosimilar en todas las escalas de longitud. Hay l\'{i}mites de tamaño superior e inferior m\'{a}s all\'{a} de los cuales una macromol\'{e}cula ya no es fractal. Por lo que la investigaci\'{o}n fractal sobre enzimas y prote\'{i}nas es actualmente un campo activo \cite{Mustafa1996}. 
+\label{subsec:subseccion2.6}
 
 
+Tras establecer la definición de D, exploramos la multifractalidad presente en geles y fluidos magnetorreológicos (ver sección \ref{subsec:subseccion2.2}), y presentamos varios métodos para su determinación. Surge naturalmente la pregunta, ¿La dimensi\'{o}n fractal tiene alguna utilidad?, las respuestas provienen de varios experimentos en los que se ha empleado para cuantificar algunos aspectos de la morfolog\'{i}a proteica. Dado que la estructura de las prote\'{i}nas tiene una forma tan compleja, solo se puede analizar adecuadamente mediante el enfoque de la geometr\'{i}a fractal \cite{Mustafa1996}. 
+Es importante recordar que los elementos de la estructura primaria de un prote\'{i}na se le conoce como amino\'{a}cidos. Los elementos de la estructura secundaria de las prote\'{i}nas son las $\alpha$-h\'{e}lices y l\'{a}minas-$\beta$, mientras que la estructura terciaria se relaciona con las disposiciones espaciales de los amino\'{a}cidos en las prote\'{i}nas. La dimensi\'{o}n fractal juega un papel crucial porque se puede utilizar para caracterizar las estructuras terciarias de las prote\'{i}nas y las enzimas \cite{Mustafa1996}. Aunque se pueden construir fractales iterados que son perfectamente autosimilares, la autosimilitud de una cadena de prote\'{i}nas, es similar solo en un sentido estad\'{i}stico, es decir, no siempre se ver\'{a} exactamente como el todo. Otra diferencia entre las macromol\'{e}culas biol\'{o}gicas y los objetos ideales es que un fractal no es autosimilar en todas las escalas de longitud. Hay l\'{i}mites de tamaño superior e inferior m\'{a}s all\'{a} de los cuales una macromol\'{e}cula ya no es un fractal. Por lo que la investigaci\'{o}n fractal sobre enzimas y prote\'{i}nas es actualmente un campo activo \cite{Mustafa1996}. 
 
-\subsection{Medidas basadas en distancia de la similitud estructural de prote\'{i}nas: RMSD}
-
-Auque el problema de que medir las diferencias entre dos estructuras similares 
-parece un problema sencillo, su cuantificaci\'{o}n puede ser compleja 
-y sigue evolucionando \cite{Kufareva2012}. Una de las medidas 
-cuantitativas m\'{a}s comunes para determinar la similitud entre 
-dos conjuntos de coordenadas at\'{o}micas es la Desviaci\'{o}n Cuadr\'{a}tica Media 
-(RMSD, por sus siglas en ingl\'{e}s), se expresa como:
-
-\begin{equation}
-RMSD = \sqrt{\frac{1}{n} \sum_{i=1}^{n} d_i^2}
-\end{equation}
-
-donde \(n\) es el n\'{u}mero total de pares de \'{a}tomos considerados 
-y \(d_i\) es la distancia entre los \'{a}tomos del par \(i\).
-
-
-El uso del RMSD es crucial en campos como la bioqu\'{i}mica 
-y la qu\'{i}mica computacional porque permite comparar modelos generados por 
-simulaciones o experimentos para verificar su similitud con estructuras 
-conocidas, como prote\'{i}nas o complejos moleculares.
-
-No obstante, el RMSD puede ser engañoso cuando se trata de diferencias
- locales significativas. Por ejemplo, dos estructuras que difieren solo 
- en un segmento pequeño, como un bucle o un extremo flexible, pueden tener 
- un RMSD global alto, lo que dificulta el an\'{a}lisis. Por esta raz\'{o}n, encontrar
-  m\'{e}todos alternativos o enfoques complementarios para comparar estructuras 
-  es fundamental. Estas alternativas pueden enfocarse en las regiones clave,
-   permitiendo a los investigadores ignorar las variaciones menores y 
-  centrarse en las partes cr\'{i}ticas de las estructuras.
-
-\begin{comment}
-Sin embargo, el RMSD tiene una desventaja clave: es muy sensible a
- cambios grandes en segmentos pequeños. Por lo tanto, aunque dos 
- estructuras sean muy parecidas en su mayor\'{i}a, un pequeño cambio, 
- como la rotaci\'{o}n de un bucle o la flexibilidad de un extremo,
-  puede resultar en un RMSD alto, complicando la comparaci\'{o}n eficaz.
-\end{comment}
 
 \clearpage
 
@@ -254,11 +252,11 @@ o resolver entre prote\'{i}nas gen\'{e}ticamente similares pero con diferencias 
 
 \begin{enumerate}
 	
-\item Obtenci\'{o}n de la estructura tridimensional de la prote\'{i}na: Obtener la estructura tridimensional de la prote\'{i}nas que fue determinda mediante t\'{e}cnicas experimentales como la cristalograf\'{i}a de rayos X o la espectroscopia de resonancia magn\'{e}tica nuclear.
+\item Obtenci\'{o}n de la estructuras tridimensionales de un conjunto de prote\'{i}nas: Obtener las estructura tridimensional de la prote\'{i}nas que fueron determindas mediante t\'{e}cnicas experimentales como la cristalograf\'{i}a de rayos X o la espectroscopia de resonancia magn\'{e}tica nuclear. La idea es contar con datos experimentales lo m\'{a}s confiables posibles.
 
-\item C\'{a}lculo de la dimensi\'{o}n fractal de masa: El c\'{a}lculo de la dimensi\'{o}n fractal de masa implica medir c\'{o}mo var\'{i}a el volumen del objeto (en este caso, la prote\'{i}na) con respecto a la escala a la que se est\'{a} observando. Esto se puede hacer utilizando algoritmos espec\'{i}ficos para el c\'{a}lculo de la dimensi\'{o}n fractal de masa como el algoritmo box-counting.
+\item C\'{a}lculo de la dimensi\'{o}n fractal de masa: El c\'{a}lculo de la dimensi\'{o}n fractal de masa implica medir c\'{o}mo var\'{i}a el volumen del objeto (en este caso, las prote\'{i}nas) con respecto a la escala a la que se est\'{a} observando. Esto se puede hacer con adaptaciones de los algoritmos conocidos, lo descrito en las secciones \ref{subsec:subseccion2.3} y \ref{subsec:subseccion2.5}.
 
-\item An\'{a}lisis de la complejidad geom\'{e}trica de la prote\'{i}na: Una vez calculada la dimensi\'{o}n fractal de masa para la prote\'{i}na, se analizar\'{a} c\'{o}mo var\'{i}a esta dimensi\'{o}n en diferentes escalas. Esto nos permitir\'{i}a caracterizar la complejidad geom\'{e}trica de la prote\'{i}na a diferentes niveles de detalle.
+\item An\'{a}lisis de la complejidad geom\'{e}trica de la prote\'{i}nas: Una vez calculada la dimensi\'{o}n fractal de masa para las prote\'{i}nas, se analizar\'{a} c\'{o}mo var\'{i}a esta dimensi\'{o}n en diferentes escalas. Esto nos permitir\'{i}a caracterizar la complejidad geom\'{e}trica de las prote\'{i}nas a diferentes niveles de detalle.
 
 \end{enumerate}
 
@@ -293,11 +291,9 @@ Preparaci\'{o}n de sistemas de estudio  &  &  &  &  &  &  &  &  &  &  &  & X \\
 \\\hline
 & Ago & Sep & Oct & Nov & Dic & Ene & Feb & Mar & Abr & May & Jun & Jul\\
 \hline
-XXII RMFQT &  &  &  & X &  &  &  &  &  &  &  &\\
+Asistencia a congreso &  &  &  & X &  &  &  &  &  &  &  &\\
 \hline
 XXlX Simposio interno FCQ - ICUAP &  &  &  & X &  &  &  &  &  &  &  &\\
-\hline
-LIII Winter Meeting on Statistical Physics &  &  &  &  &  & X &  &  &  &  &  &\\
 \hline
 Revisi\'{o}n bibliogr\'{a}fica & X & X & X & X & X & X & X & X & X & X & X &\\
 \hline
